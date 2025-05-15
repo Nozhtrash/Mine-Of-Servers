@@ -1,2 +1,1 @@
-# JavBed
-Servers Minecraft
+
