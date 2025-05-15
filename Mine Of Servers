@@ -6,6 +6,11 @@
     <!-- SEO Mejorado -->
     <meta name="description" content="Mine Of Servers: Top servidores de Minecraft en español, rankings, foro, skins, comunidad activa.">
     <meta name="keywords" content="Mine Of Servers, servidores Minecraft, Minecraft latino, servidores gratis, ranking Minecraft, skins Minecraft">
+    <meta name="author" content="Mine Of Servers">
+    <meta property="og:title" content="Mine Of Servers | Comunidad Minecraft">
+    <meta property="og:description" content="Top servidores de Minecraft en español, rankings, foro, skins, comunidad activa.">
+    <meta property="og:image" content="URL_A_UNA_IMAGEN_REPRESENTATIVA">
+    <meta property="og:type" content="website">
     <title>Mine Of Servers | Comunidad Minecraft</title>
     <link rel="icon" href="https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,14 +19,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: {
-                            600: 'var(--color-primary-600)',
-                            700: 'var(--color-primary-700)',
-                        },
-                        secondary: {
-                            600: 'var(--color-secondary-600)',
-                            700: 'var(--color-secondary-700)',
-                        }
+                        primary: '#1d4ed8',
+                        secondary: '#9333ea',
                     }
                 }
             }
@@ -29,6 +28,7 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
         :root {
             --color-primary-600: #3b82f6;
@@ -105,17 +105,19 @@
             transform: translateY(-3px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .vip-rainbow {
-            background: linear-gradient(90deg, #ff0000, #ff9900, #33ff00, #00ccff, #6600ff, #ff00cc, #ff0000);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: rainbow 3s linear infinite;
-        }
-        @keyframes rainbow {
-            0% {background-position:0% 50%;}
-            100% {background-position:100% 50%;}
-        }
+    .vip-rainbow  {
+        background: linear-gradient(90deg, #ff0000, #ff9900, #33ff00, #00ccff, #6600ff, #ff00cc, #ff0000);
+        background-size: 400% 400%;
+        background-clip: text;              /* Standard property for compatibility */
+        -webkit-background-clip: text;      /* Webkit for Chrome/Safari */
+        -webkit-text-fill-color: transparent;
+        color: transparent;                 /* Standard property for compatibility */
+        animation: rainbow 3s linear infinite;
+    }
+    @keyframes rainbow {
+        0% {background-position:0% 50%;}
+        100% {background-position:100% 50%;}
+    }
         /* Responsive Mejorado */
         @media (max-width: 1024px) {
             .lg\:col-span-2, .lg\:col-span-1, .lg\:col-span-4 { grid-column: span 1 / span 1 !important; }
@@ -197,9 +199,8 @@
     </div>
 
     <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <!-- Left Sidebar -->
+    <main>
+        <aside> <!-- Sidebar izquierda --> 
             <div class="lg:col-span-1 space-y-6">
                 <!-- Search Filters -->
                 <div class="bg-gray-800 rounded-lg shadow p-4">
@@ -291,8 +292,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Main Content Area -->
+        </aside>
+        <section id="servers"> 
             <div class="lg:col-span-2 space-y-6">
                 <!-- Server List Header -->
                 <div id="servers" class="bg-gray-800 rounded-lg shadow p-4">
@@ -488,245 +489,227 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- News Section -->
-                <div id="news" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-bold">Noticias de Minecraft</h2>
-                        <div class="flex space-x-2">
-                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                                Java Edition
-                            </button>
-                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                                Bedrock Edition
-                            </button>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- News Card 1 -->
-                        <div class="news-card bg-gray-700 rounded-lg shadow overflow-hidden transition duration-300">
-                            <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/creeper-update-mobile.jpg" alt="News image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-bold">Actualización 1.20: Trails & Tales</h3>
-                                <p class="text-sm text-gray-300 mt-1">Descubre los nuevos biomas, mobs y características en la última actualización.</p>
-                                <div class="flex items-center mt-3 text-xs text-gray-400">
-                                    <span>Publicado: 07/06/2023</span>
-                                    <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">Java</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- En cada sección de comentarios -->
-                        <div id="comments-news1"></div>
-                        <input id="input-news1" type="text" placeholder="Escribe un comentario..." class="w-full px-2 py-1 rounded bg-gray-700 text-white mt-2">
-                        <button onclick="addComment('news1', document.getElementById('input-news1').value)">Comentar</button>
-                        <!-- News Card 2 -->
-                        <div class="news-card bg-gray-700 rounded-lg shadow overflow-hidden transition duration-300">
-                            <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/nether-update-mobile.jpg" alt="News image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-bold">Nuevas características en Bedrock</h3>
-                                <p class="text-sm text-gray-300 mt-1">Mejoras de rendimiento y nuevas opciones de personalización.</p>
-                                <div class="flex items-center mt-3 text-xs text-gray-400">
-                                    <span>Publicado: 15/06/2023</span>
-                                    <span class="ml-auto bg-green-600 text-white px-2 py-0.5 rounded">Bedrock</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todas las noticias →</a>
-                    </div>
-                </div>
-
-                <!-- Forum Section -->
-                <div id="forum" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-bold">Foro de la Comunidad</h2>
-                        <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
-                            <i class="fas fa-plus mr-1"></i> Nuevo Tema
+            </div>
+        </section>
+        <section id="news"> 
+            <div class="news-content bg-gray-800 rounded-lg shadow p-4 mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Noticias de Minecraft</h2>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
+                            Java Edition
+                        </button>
+                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
+                            Bedrock Edition
                         </button>
                     </div>
-                    <div class="space-y-4">
-                        <!-- Forum Category -->
-                        <div class="bg-gray-700 rounded-lg overflow-hidden">
-                            <div class="bg-gray-600 px-4 py-2">
-                                <h3 class="font-bold">Servidores</h3>
-                            </div>
-                            <div class="divide-y divide-gray-600">
-                                <!-- Forum Post 1 -->
-                                <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
-                                    <div class="flex items-start">
-                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
-                                        <div class="ml-3 flex-1">
-                                            <div class="flex items-center">
-                                                <h4 class="font-medium">¿Recomendaciones de servidores Survival técnico?</h4>
-                                                <span class="ml-auto text-xs text-gray-400">15 respuestas</span>
-                                            </div>
-                                            <div class="flex items-center mt-1 text-xs text-gray-400">
-                                                <span>Por <span class="text-blue-400">Usuario123</span></span>
-                                                <span class="ml-3">Hoy 10:45 AM</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Forum Post 2 -->
-                                <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
-                                    <div class="flex items-start">
-                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
-                                        <div class="ml-3 flex-1">
-                                            <div class="flex items-center">
-                                                <h4 class="font-medium">Mi experiencia en Hypixel esta semana</h4>
-                                                <span class="ml-auto text-xs text-gray-400">24 respuestas</span>
-                                            </div>
-                                            <div class="flex items-center mt-1 text-xs text-gray-400">
-                                                <span>Por <span class="vip-name">AlexMiner</span></span>
-                                                <span class="ml-3">Ayer 4:30 PM</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Forum Category -->
-                        <div class="bg-gray-700 rounded-lg overflow-hidden">
-                            <div class="bg-gray-600 px-4 py-2">
-                                <h3 class="font-bold">Eventos</h3>
-                            </div>
-                            <div class="divide-y divide-gray-600">
-                                <!-- Forum Post 1 -->
-                                <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
-                                    <div class="flex items-start">
-                                        <img src="https://mc-heads.net/avatar/MHF_Enderman" alt="User avatar" class="h-8 w-8 rounded-full">
-                                        <div class="ml-3 flex-1">
-                                            <div class="flex items-center">
-                                                <h4 class="font-medium">Torneo de PvP este fin de semana</h4>
-                                                <span class="ml-auto text-xs text-gray-400">8 respuestas</span>
-                                            </div>
-                                            <div class="flex items-center mt-1 text-xs text-gray-400">
-                                                <span>Por <span class="vip-name">EndyGuy</span></span>
-                                                <span class="ml-3">Ayer 1:15 PM</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- News Card 1 -->
+                    <div class="news-card bg-gray-700 rounded-lg shadow overflow-hidden transition duration-300">
+                        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/creeper-update-mobile.jpg" alt="News image" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Actualización 1.20: Trails & Tales</h3>
+                            <p class="text-sm text-gray-300 mt-1">Descubre los nuevos biomas, mobs y características en la última actualización.</p>
+                            <div class="flex items-center mt-3 text-xs text-gray-400">
+                                <span>Publicado: 07/06/2023</span>
+                                <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">Java</span>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 text-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todo el foro →</a>
+                    <!-- En cada sección de comentarios -->
+                    <div id="comments-news1"></div>
+                    <input id="input-news1" type="text" placeholder="Escribe un comentario..." class="w-full px-2 py-1 rounded bg-gray-700 text-white mt-2">
+                    <button onclick="addComment('news1', document.getElementById('input-news1').value)">Comentar</button>
+                    <!-- News Card 2 -->
+                    <div class="news-card bg-gray-700 rounded-lg shadow overflow-hidden transition duration-300">
+                        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/nether-update-mobile.jpg" alt="News image" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Nuevas características en Bedrock</h3>
+                            <p class="text-sm text-gray-300 mt-1">Mejoras de rendimiento y nuevas opciones de personalización.</p>
+                            <div class="flex items-center mt-3 text-xs text-gray-400">
+                                <span>Publicado: 15/06/2023</span>
+                                <span class="ml-auto bg-green-600 text-white px-2 py-0.5 rounded">Bedrock</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Mods Section -->
-                <div id="mods" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-bold">Mods Populares</h2>
-                        <div class="flex space-x-2">
-                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                                Java
-                            </button>
-                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                                Bedrock
-                            </button>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Mod Card 1 -->
-                        <div class="bg-gray-700 rounded-lg shadow p-4">
-                            <div class="flex items-start">
-                                <img src="https://via.placeholder.com/64?text=Mod1" alt="Mod icon" class="h-12 w-12 rounded">
-                                <div class="ml-3">
-                                    <h3 class="font-bold">OptiFine</h3>
-                                    <p class="text-sm text-gray-300 mt-1">Mejora el rendimiento y añade soporte para shaders HD.</p>
-                                    <div class="flex items-center mt-2 text-xs text-gray-400">
-                                        <span>Descargas: 10M+</span>
-                                        <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">1.20</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Mod Card 2 -->
-                        <div class="bg-gray-700 rounded-lg shadow p-4">
-                            <div class="flex items-start">
-                                <img src="https://via.placeholder.com/64?text=Mod2" alt="Mod icon" class="h-12 w-12 rounded">
-                                <div class="ml-3">
-                                    <h3 class="font-bold">Create</h3>
-                                    <p class="text-sm text-gray-300 mt-1">Añade máquinas y sistemas mecánicos avanzados.</p>
-                                    <div class="flex items-center mt-2 text-xs text-gray-400">
-                                        <span>Descargas: 5M+</span>
-                                        <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">1.19</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todos los mods →</a>
-                    </div>
-                </div>
-
-                <!-- Essential Servers Section -->
-                <div id="essential" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-bold">Servidores Essential</h2>
-                        <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
-                            <i class="fas fa-plus mr-1"></i> Crear Server
-                        </button>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Essential Server 1 -->
-                        <div class="bg-gray-700 rounded-lg shadow p-4">
-                            <div class="flex items-start">
-                                <img src="https://mc-heads.net/avatar/MHF_Steve" alt="Owner avatar" class="h-10 w-10 rounded-full">
-                                <div class="ml-3">
-                                    <h3 class="font-bold">Survival Amigos</h3>
-                                    <p class="text-sm text-gray-300 mt-1">Jugadores: 3/10</p>
-                                    <div class="flex items-center mt-2 text-xs text-gray-400">
-                                        <span>Dueño: Usuario123</span>
-                                        <span class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded">Online</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Essential Server 2 -->
-                        <div class="bg-gray-700 rounded-lg shadow p-4">
-                            <div class="flex items-start">
-                                <img src="https://mc-heads.net/avatar/MHF_Alex" alt="Owner avatar" class="h-10 w-10 rounded-full">
-                                <div class="ml-3">
-                                    <h3 class="font-bold">Construcción Creativa</h3>
-                                    <p class="text-sm text-gray-300 mt-1">Jugadores: 5/10</p>
-                                    <div class="flex items-center mt-2 text-xs text-gray-400">
-                                        <span>Dueño: AlexMiner</span>
-                                        <span class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded">Online</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todos los servidores →</a>
-                    </div>
-                </div>
-
-                <!-- Help and Support Section -->
-                <div id="help-chat" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                    <h2 class="text-xl font-bold mb-4">Ayuda y Soporte</h2>
-                    <div id="help-messages" class="h-40 overflow-y-auto bg-gray-700 rounded p-2 mb-2"></div>
-                    <input id="help-input" class="w-full px-3 py-2 rounded bg-gray-700 text-white mb-2" placeholder="¿En qué necesitas ayuda?">
-                    <button id="help-send" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded">Enviar</button>
-                </div>
-
-                <!-- Sección de guías -->
-                <div id="guides" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                    <h2 class="text-xl font-bold mb-4">Guías y Consejos</h2>
-                    <div>
-                        <a href="/guia/como-instalar-mods" class="text-blue-400 hover:text-blue-300">Cómo instalar mods en Minecraft</a>
-                        <p class="text-sm text-gray-300">Aprende paso a paso a instalar mods en cualquier versión...</p>
-                    </div>
-                    <!-- Más guías... -->
+                <div class="mt-4 text-center">
+                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todas las noticias →</a>
                 </div>
             </div>
-
-            <!-- Right Sidebar -->
+        </section>
+        <section id="forum"> 
+            <div id="forum" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Foro de la Comunidad</h2>
+                    <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
+                        <i class="fas fa-plus mr-1"></i> Nuevo Tema
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <!-- Forum Category -->
+                    <div class="bg-gray-700 rounded-lg overflow-hidden">
+                        <div class="bg-gray-600 px-4 py-2">
+                            <h3 class="font-bold">Servidores</h3>
+                        </div>
+                        <div class="divide-y divide-gray-600">
+                            <!-- Forum Post 1 -->
+                            <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
+                                <div class="flex items-start">
+                                    <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                    <div class="ml-3 flex-1">
+                                        <div class="flex items-center">
+                                            <h4 class="font-medium">¿Recomendaciones de servidores Survival técnico?</h4>
+                                            <span class="ml-auto text-xs text-gray-400">15 respuestas</span>
+                                        </div>
+                                        <div class="flex items-center mt-1 text-xs text-gray-400">
+                                            <span>Por <span class="text-blue-400">Usuario123</span></span>
+                                            <span class="ml-3">Hoy 10:45 AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Forum Post 2 -->
+                            <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
+                                <div class="flex items-start">
+                                    <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                    <div class="ml-3 flex-1">
+                                        <div class="flex items-center">
+                                            <h4 class="font-medium">Mi experiencia en Hypixel esta semana</h4>
+                                            <span class="ml-auto text-xs text-gray-400">24 respuestas</span>
+                                        </div>
+                                        <div class="flex items-center mt-1 text-xs text-gray-400">
+                                            <span>Por <span class="vip-name">AlexMiner</span></span>
+                                            <span class="ml-3">Ayer 4:30 PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Forum Category -->
+                    <div class="bg-gray-700 rounded-lg overflow-hidden">
+                        <div class="bg-gray-600 px-4 py-2">
+                            <h3 class="font-bold">Eventos</h3>
+                        </div>
+                        <div class="divide-y divide-gray-600">
+                            <!-- Forum Post 1 -->
+                            <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
+                                <div class="flex items-start">
+                                    <img src="https://mc-heads.net/avatar/MHF_Enderman" alt="User avatar" class="h-8 w-8 rounded-full">
+                                    <div class="ml-3 flex-1">
+                                        <div class="flex items-center">
+                                            <h4 class="font-medium">Torneo de PvP este fin de semana</h4>
+                                            <span class="ml-auto text-xs text-gray-400">8 respuestas</span>
+                                        </div>
+                                        <div class="flex items-center mt-1 text-xs text-gray-400">
+                                            <span>Por <span class="vip-name">EndyGuy</span></span>
+                                            <span class="ml-3">Ayer 1:15 PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todo el foro →</a>
+                </div>
+            </div>
+        </section>
+        <section id="mods"> 
+            <div id="mods" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Mods Populares</h2>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
+                            Java
+                        </button>
+                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
+                            Bedrock
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Mod Card 1 -->
+                    <div class="bg-gray-700 rounded-lg shadow p-4">
+                        <div class="flex items-start">
+                            <img src="https://via.placeholder.com/64?text=Mod1" alt="Mod icon" class="h-12 w-12 rounded">
+                            <div class="ml-3">
+                                <h3 class="font-bold">OptiFine</h3>
+                                <p class="text-sm text-gray-300 mt-1">Mejora el rendimiento y añade soporte para shaders HD.</p>
+                                <div class="flex items-center mt-2 text-xs text-gray-400">
+                                    <span>Descargas: 10M+</span>
+                                    <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">1.20</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mod Card 2 -->
+                    <div class="bg-gray-700 rounded-lg shadow p-4">
+                        <div class="flex items-start">
+                            <img src="https://via.placeholder.com/64?text=Mod2" alt="Mod icon" class="h-12 w-12 rounded">
+                            <div class="ml-3">
+                                <h3 class="font-bold">Create</h3>
+                                <p class="text-sm text-gray-300 mt-1">Añade máquinas y sistemas mecánicos avanzados.</p>
+                                <div class="flex items-center mt-2 text-xs text-gray-400">
+                                    <span>Descargas: 5M+</span>
+                                    <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">1.19</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todos los mods →</a>
+                </div>
+            </div>
+        </section>
+        <section id="essential"> 
+            <div id="essential" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Servidores Essential</h2>
+                    <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
+                        <i class="fas fa-plus mr-1"></i> Crear Server
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Essential Server 1 -->
+                    <div class="bg-gray-700 rounded-lg shadow p-4">
+                        <div class="flex items-start">
+                            <img src="https://mc-heads.net/avatar/MHF_Steve" alt="Owner avatar" class="h-10 w-10 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-bold">Survival Amigos</h3>
+                                <p class="text-sm text-gray-300 mt-1">Jugadores: 3/10</p>
+                                <div class="flex items-center mt-2 text-xs text-gray-400">
+                                    <span>Dueño: Usuario123</span>
+                                    <span class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Essential Server 2 -->
+                    <div class="bg-gray-700 rounded-lg shadow p-4">
+                        <div class="flex items-start">
+                            <img src="https://mc-heads.net/avatar/MHF_Alex" alt="Owner avatar" class="h-10 w-10 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-bold">Construcción Creativa</h3>
+                                <p class="text-sm text-gray-300 mt-1">Jugadores: 5/10</p>
+                                <div class="flex items-center mt-2 text-xs text-gray-400">
+                                    <span>Dueño: AlexMiner</span>
+                                    <span class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todos los servidores →</a>
+                </div>
+            </div>
+        </section>
+        <aside> <!-- Sidebar derecha --> 
             <div class="lg:col-span-1 space-y-6">
                 <!-- User Profile -->
                 <div id="profile" class="bg-gray-800 rounded-lg shadow overflow-hidden">
@@ -924,8 +907,8 @@
                 <!-- Widget Discord (opcional) -->
                 <iframe src="https://discord.com/widget?id=TU_ID&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
             </div>
-        </div>
-    </div>
+        </aside>
+    </main>
 
     <!-- Server Profile Modal -->
     <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
@@ -1128,7 +1111,7 @@
           <input id="login-password" type="password" required placeholder="Contraseña" class="w-full px-3 py-2 rounded bg-gray-700 text-white">
           <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Entrar</button>
           <button type="button" id="forgot-pass" class="w-full text-xs text-blue-400 mt-1">¿Olvidaste tu contraseña?</button>
-          <button type="button" id="google-login" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded mt-2"><i class="fab fa-google mr-1"></i> Google</button>
+          <button type="button" id="login-google" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded mt-2"><i class="fab fa-google mr-1"></i> Google</button>
         </form>
         <form id="register-form" class="space-y-3 hidden">
           <input id="register-email" type="email" required placeholder="Correo" class="w-full px-3 py-2 rounded bg-gray-700 text-white">
@@ -1193,29 +1176,53 @@
         </div>
     </footer>
 
-    <script>
+    <script type="module">
 /* =========================
    ESTADO GLOBAL Y UTILIDADES
    ========================= */
 let currentLanguage = 'es';
-let isVIP = true; // Simulación de usuario VIP
 let selectedServerType = 'Java';
 let selectedNewsType = 'Java';
 let selectedModsType = 'Java';
 let currentUser = null;
+let isVIP = false; // Ahora se gestiona desde Firestore
+
+/* =========================
+   FIREBASE CONFIGURACIÓN Y UTILIDADES
+   ========================= */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc, collection, addDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+// TODO: Cambia esto por tu config real
+const firebaseConfig = {
+    apiKey: "TU_API_KEY",
+    authDomain: "TU_AUTH_DOMAIN",
+    projectId: "TU_PROJECT_ID",
+    storageBucket: "TU_BUCKET",
+    messagingSenderId: "TU_SENDER_ID",
+    appId: "TU_APP_ID"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 /* =========================
    NAVBAR Y DROPDOWN USUARIO
    ========================= */
-document.getElementById('user-menu').addEventListener('click', function(e) {
-    e.stopPropagation();
-    document.getElementById('user-dropdown').classList.toggle('hidden');
-});
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('#user-menu') && !event.target.closest('#user-dropdown')) {
-        document.getElementById('user-dropdown').classList.add('hidden');
-    }
-});
+const userMenu = document.getElementById('user-menu');
+const userDropdown = document.getElementById('user-dropdown');
+if (userMenu && userDropdown) {
+    userMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+        userDropdown.classList.toggle('hidden');
+    });
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('#user-menu') && !event.target.closest('#user-dropdown')) {
+            userDropdown.classList.add('hidden');
+        }
+    });
+}
 
 /* =========================
    TABS DE SKINS
@@ -1235,22 +1242,24 @@ skinTabs.forEach(tab => {
    ========================= */
 const javaTab = document.getElementById('java-tab');
 const bedrockTab = document.getElementById('bedrock-tab');
-javaTab.addEventListener('click', function() {
-    javaTab.classList.add('active');
-    javaTab.classList.remove('bg-gray-700');
-    bedrockTab.classList.remove('active');
-    bedrockTab.classList.add('bg-gray-700');
-    selectedServerType = 'Java';
-    filterServers();
-});
-bedrockTab.addEventListener('click', function() {
-    bedrockTab.classList.add('active');
-    bedrockTab.classList.remove('bg-gray-700');
-    javaTab.classList.remove('active');
-    javaTab.classList.add('bg-gray-700');
-    selectedServerType = 'Bedrock';
-    filterServers();
-});
+if (javaTab && bedrockTab) {
+    javaTab.addEventListener('click', function() {
+        javaTab.classList.add('active');
+        javaTab.classList.remove('bg-gray-700');
+        bedrockTab.classList.remove('active');
+        bedrockTab.classList.add('bg-gray-700');
+        selectedServerType = 'Java';
+        filterServers();
+    });
+    bedrockTab.addEventListener('click', function() {
+        bedrockTab.classList.add('active');
+        bedrockTab.classList.remove('bg-gray-700');
+        javaTab.classList.remove('active');
+        javaTab.classList.add('bg-gray-700');
+        selectedServerType = 'Bedrock';
+        filterServers();
+    });
+}
 
 /* =========================
    FILTROS DE SERVIDORES
@@ -1403,26 +1412,46 @@ document.querySelectorAll('button').forEach(btn => {
    LANGUAGE TOGGLE
    ========================= */
 const languageToggle = document.getElementById('language-toggle');
-languageToggle.addEventListener('click', function() {
-    if (currentLanguage === 'es') {
-        currentLanguage = 'en';
-        languageToggle.innerHTML = '<i class="fas fa-globe mr-1"></i> EN';
-        alert('Traducción a inglés (demo)');
-    } else {
-        currentLanguage = 'es';
-        languageToggle.innerHTML = '<i class="fas fa-globe mr-1"></i> ES';
-        alert('Traducción a español (demo)');
-    }
-});
+if (languageToggle) {
+    languageToggle.addEventListener('click', function() {
+        if (currentLanguage === 'es') {
+            currentLanguage = 'en';
+            languageToggle.innerHTML = '<i class="fas fa-globe mr-1"></i> EN';
+            alert('Traducción a inglés (demo)');
+        } else {
+            currentLanguage = 'es';
+            languageToggle.innerHTML = '<i class="fas fa-globe mr-1"></i> ES';
+            alert('Traducción a español (demo)');
+        }
+    });
+}
+
+/* =========================
+   BLOQUEO DE FUNCIONES SOCIALES EN UI
+   ========================= */
+function lockSocialFeatures() {
+    // Chat de ayuda
+    document.getElementById('help-input')?.setAttribute('disabled', !currentUser);
+    document.getElementById('help-send')?.setAttribute('disabled', !currentUser);
+    // Opiniones en servidores
+    document.querySelectorAll('.opiniones textarea, .opiniones button').forEach(el => el.disabled = !currentUser);
+    // Comentarios en noticias/foro
+    document.querySelectorAll('input[id^="input-"], button[data-comment]').forEach(el => el.disabled = !currentUser);
+}
 
 /* =========================
    OCULTAR ANUNCIOS SI ES VIP
    ========================= */
-if (isVIP) {
+function toggleAds() {
     const adLeft = document.getElementById('ad-left');
     const adRight = document.getElementById('ad-right');
-    if (adLeft) adLeft.classList.add('hidden');
-    if (adRight) adRight.classList.add('hidden');
+    if (isVIP) {
+        adLeft?.classList.add('hidden');
+        adRight?.classList.add('hidden');
+    } else {
+        adLeft?.classList.remove('hidden');
+        adRight?.classList.remove('hidden');
+    }
 }
 
 /* =========================
@@ -1447,18 +1476,16 @@ stars.forEach(star => {
 /* =========================
    BOTÓN EDITAR PERFIL
    ========================= */
-document.querySelectorAll('a').forEach(a => {
-    if (a.textContent.includes('Editar Perfil')) {
-        a.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('profile-modal').classList.remove('hidden');
-            // Carga datos actuales si existen
-            const profile = JSON.parse(localStorage.getItem('profile') || '{}');
-            document.getElementById('profile-name').value = profile.name || '';
-            document.getElementById('profile-color').value = profile.color || '#ffffff';
-            document.getElementById('profile-signature').value = profile.signature || '';
-        });
-    }
+document.getElementById('edit-profile-btn')?.addEventListener('click', function() {
+    if (!currentUser) return;
+    document.getElementById('profile-modal').classList.remove('hidden');
+    // Carga datos actuales si existen
+    getDoc(doc(db, "users", currentUser.uid)).then(userDoc => {
+        const data = userDoc.exists() ? userDoc.data() : {};
+        document.getElementById('profile-name').value = data.name || '';
+        document.getElementById('profile-color').value = data.color || '#ffffff';
+        document.getElementById('profile-signature').value = data.signature || '';
+    });
 });
 
 /* =========================
@@ -1478,263 +1505,46 @@ function updateServerStats() {
 setInterval(updateServerStats, 5000);
 
 /* =========================
-   FIREBASE AUTH
+   AUTENTICACIÓN Y USUARIO
    ========================= */
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-
-const firebaseConfig = { /* tu config */ };
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
 const loginBtn = document.getElementById('login-google');
 const logoutBtn = document.getElementById('logout');
 const userInfo = document.getElementById('user-info');
+if (loginBtn && logoutBtn && userInfo) {
+    loginBtn.onclick = () => signInWithPopup(auth, new GoogleAuthProvider());
+    logoutBtn.onclick = () => signOut(auth);
+}
 
-loginBtn.onclick = () => {
-    signInWithPopup(auth, new GoogleAuthProvider());
-};
-logoutBtn.onclick = () => {
-    signOut(auth);
-};
-
-onAuthStateChanged(auth, user => {
+onAuthStateChanged(auth, async user => {
     currentUser = user;
-    lockSocialFeatures();
     if (user) {
-        loginBtn.classList.add('hidden');
-        logoutBtn.classList.remove('hidden');
+        loginBtn?.classList.add('hidden');
+        logoutBtn?.classList.remove('hidden');
         userInfo.textContent = `Hola, ${user.displayName || user.email}`;
-        document.getElementById('edit-profile-btn').classList.remove('hidden');
-        // Mostrar inputs VIP si corresponde
-        const isVIP = getUserRole(user?.email) === 'vip';
+        document.getElementById('edit-profile-btn')?.classList.remove('hidden');
+        // Carga rol desde Firestore
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        isVIP = userDoc.exists() && userDoc.data().role === "vip";
         document.getElementById('cover-label').style.display = isVIP ? 'block' : 'none';
         document.getElementById('signature-gif-label').style.display = isVIP ? 'block' : 'none';
     } else {
-        loginBtn.classList.remove('hidden');
-        logoutBtn.classList.add('hidden');
+        loginBtn?.classList.remove('hidden');
+        logoutBtn?.classList.add('hidden');
         userInfo.textContent = '';
-        document.getElementById('edit-profile-btn').classList.add('hidden');
+        document.getElementById('edit-profile-btn')?.classList.add('hidden');
+        isVIP = false;
     }
+    lockSocialFeatures();
+    toggleAds();
 });
 
 /* =========================
-   BLOQUEO DE FUNCIONES SOCIALES EN UI
+   REGISTRO Y LOGIN EMAIL
    ========================= */
-function requireAuth(action) {
-    if (!currentUser) {
-        document.getElementById('auth-modal').classList.remove('hidden');
-        if (action) document.getElementById('auth-modal').dataset.action = action;
-        return false;
-    }
-    return true;
-}
-function lockSocialFeatures() {
-    // Chat de ayuda
-    document.getElementById('help-input').disabled = !currentUser;
-    document.getElementById('help-send').disabled = !currentUser;
-    // Opiniones en servidores
-    document.querySelectorAll('.opiniones textarea, .opiniones button').forEach(el => el.disabled = !currentUser);
-    // Comentarios en noticias/foro
-    document.querySelectorAll('input[id^="input-"], button[data-comment]').forEach(el => el.disabled = !currentUser);
-}
-lockSocialFeatures();
-
-/* =========================
-   INTERFAZ DE AUTENTICACIÓN
-   ========================= */
-const authModal = document.getElementById('auth-modal');
-const tabLogin = document.getElementById('tab-login');
-const tabRegister = document.getElementById('tab-register');
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('register-form');
-const closeAuth = document.getElementById('close-auth');
-const authMsg = document.getElementById('auth-msg');
-const forgotPass = document.getElementById('forgot-pass');
-const googleLogin = document.getElementById('google-login');
-
-// Tabs
-tabLogin.onclick = () => {
-    tabLogin.classList.add('bg-blue-600');
-    tabRegister.classList.remove('bg-blue-600');
-    loginForm.classList.remove('hidden');
-    registerForm.classList.add('hidden');
-    authMsg.textContent = '';
-};
-tabRegister.onclick = () => {
-    tabRegister.classList.add('bg-blue-600');
-    tabLogin.classList.remove('bg-blue-600');
-    registerForm.classList.remove('hidden');
-    loginForm.classList.add('hidden');
-    authMsg.textContent = '';
-};
-closeAuth.onclick = () => {
-    authModal.classList.add('hidden');
-    authMsg.textContent = '';
-};
-
-// Login
-loginForm.onsubmit = async (e) => {
-    e.preventDefault();
-    authMsg.textContent = '';
-    try {
-        await signInWithEmailAndPassword(auth, loginForm['login-email'].value, loginForm['login-password'].value);
-        authModal.classList.add('hidden');
-    } catch (err) {
-        authMsg.textContent = 'Error: ' + (err.message || 'No se pudo iniciar sesión');
-    }
-};
-
-// Registro
-registerForm.onsubmit = async (e) => {
-    e.preventDefault();
-    authMsg.textContent = '';
-    try {
-        await createUserWithEmailAndPassword(auth, registerForm['register-email'].value, registerForm['register-password'].value);
-        authMsg.textContent = '¡Cuenta creada! Revisa tu correo para verificar.';
-    } catch (err) {
-        authMsg.textContent = 'Error: ' + (err.message || 'No se pudo registrar');
-    }
-};
-
-// Google login
-googleLogin.onclick = async () => {
-    try {
-        await signInWithPopup(auth, new GoogleAuthProvider());
-        authModal.classList.add('hidden');
-    } catch (err) {
-        authMsg.textContent = 'Error: ' + (err.message || 'No se pudo iniciar sesión con Google');
-    }
-};
-
-// Olvidé mi contraseña
-forgotPass.onclick = async () => {
-    const email = loginForm['login-email'].value;
-    if (!email) {
-        authMsg.textContent = 'Ingresa tu correo para recuperar la contraseña.';
-        return;
-    }
-    try {
-        await sendPasswordResetEmail(auth, email);
-        authMsg.textContent = 'Correo de recuperación enviado.';
-    } catch (err) {
-        authMsg.textContent = 'Error: ' + (err.message || 'No se pudo enviar el correo');
-    }
-};
-
-/* =========================
-   BLOQUEA FUNCIONES SOCIALES SI NO ESTÁ AUTENTICADO
-   ========================= */
-document.getElementById('edit-profile-btn').onclick = () => {
-    if (!requireAuth()) return;
-    document.getElementById('profile-modal').classList.remove('hidden');
-    // ...carga datos...
-};
-document.getElementById('help-send').onclick = () => {
-    if (!requireAuth()) return;
-    // ...envía mensaje...
-};
-document.querySelectorAll('.opiniones button, button[data-comment]').forEach(btn => {
-    btn.onclick = (e) => {
-        if (!requireAuth()) {
-            e.preventDefault();
-            return false;
-        }
-    };
-});
-
-/* =========================
-   FUNCIONES DE UTILIDAD Y PARCHE
-   ========================= */
-function getUserRole(email) {
-    if (!email) return 'member';
-    if (email.endsWith('@admin.com')) return 'owner';
-    if (email.endsWith('@staff.com')) return 'staff';
-    if (email.endsWith('@vip.com')) return 'vip';
-    return 'member';
-}
-
-/* =========================
-   PREVENCIÓN DE ERRORES POR ELEMENTOS NULOS
-   ========================= */
-// Parche para evitar errores si algún elemento no existe
-function safeGet(id) {
-    return document.getElementById(id) || { classList: { add(){}, remove(){} }, style: {}, value: '', textContent: '', disabled: false };
-}
-
-/* =========================
-   EVITA DUPLICADOS Y ERRORES DE EVENTOS
-   ========================= */
-// Si necesitas limpiar eventos duplicados, puedes usar removeEventListener antes de agregar nuevos (no implementado aquí por simplicidad).
-
-/* =========================
-   FIN DE PARCHE Y REVISIÓN
-   ========================= */
-</script>
-    <!-- Firebase SDKs -->
-    <script type="module">
-    // =========================
-    // FIREBASE CONFIGURACIÓN Y UTILIDADES
-    // =========================
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-    import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-    import { getFirestore, doc, setDoc, getDoc, updateDoc, collection, addDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
-
-    // TODO: Cambia esto por tu config real
-    const firebaseConfig = {
-        apiKey: "TU_API_KEY",
-        authDomain: "TU_AUTH_DOMAIN",
-        projectId: "TU_PROJECT_ID",
-        storageBucket: "TU_BUCKET",
-        messagingSenderId: "TU_SENDER_ID",
-        appId: "TU_APP_ID"
-    };
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-
-    // =========================
-    // ESTADO GLOBAL
-    // =========================
-    let currentUser = null;
-    let isVIP = false;
-
-    // =========================
-    // AUTENTICACIÓN
-    // =========================
-    const loginBtn = document.getElementById('login-google');
-    const logoutBtn = document.getElementById('logout');
-    const userInfo = document.getElementById('user-info');
-    loginBtn.onclick = () => signInWithPopup(auth, new GoogleAuthProvider());
-    logoutBtn.onclick = () => signOut(auth);
-
-    onAuthStateChanged(auth, async user => {
-        currentUser = user;
-        if (user) {
-            loginBtn.classList.add('hidden');
-            logoutBtn.classList.remove('hidden');
-            userInfo.textContent = `Hola, ${user.displayName || user.email}`;
-            document.getElementById('edit-profile-btn').classList.remove('hidden');
-            // Carga rol desde Firestore
-            const userDoc = await getDoc(doc(db, "users", user.uid));
-            isVIP = userDoc.exists() && userDoc.data().role === "vip";
-            document.getElementById('cover-label').style.display = isVIP ? 'block' : 'none';
-            document.getElementById('signature-gif-label').style.display = isVIP ? 'block' : 'none';
-        } else {
-            loginBtn.classList.remove('hidden');
-            logoutBtn.classList.add('hidden');
-            userInfo.textContent = '';
-            document.getElementById('edit-profile-btn').classList.add('hidden');
-            isVIP = false;
-        }
-        lockSocialFeatures();
-        toggleAds();
-    });
-
-    // =========================
-    // REGISTRO Y LOGIN EMAIL
-    // =========================
-    document.getElementById('login-form').onsubmit = async (e) => {
+if (loginForm) {
+    loginForm.onsubmit = async (e) => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, e.target['login-email'].value, e.target['login-password'].value);
@@ -1743,7 +1553,9 @@ function safeGet(id) {
             document.getElementById('auth-msg').textContent = 'Error: ' + (err.message || 'No se pudo iniciar sesión');
         }
     };
-    document.getElementById('register-form').onsubmit = async (e) => {
+}
+if (registerForm) {
+    registerForm.onsubmit = async (e) => {
         e.preventDefault();
         try {
             const cred = await createUserWithEmailAndPassword(auth, e.target['register-email'].value, e.target['register-password'].value);
@@ -1753,7 +1565,10 @@ function safeGet(id) {
             document.getElementById('auth-msg').textContent = 'Error: ' + (err.message || 'No se pudo registrar');
         }
     };
-    document.getElementById('forgot-pass').onclick = async () => {
+}
+const forgotPass = document.getElementById('forgot-pass');
+if (forgotPass) {
+    forgotPass.onclick = async () => {
         const email = document.getElementById('login-email').value;
         if (!email) return document.getElementById('auth-msg').textContent = 'Ingresa tu correo para recuperar la contraseña.';
         try {
@@ -1763,31 +1578,15 @@ function safeGet(id) {
             document.getElementById('auth-msg').textContent = 'Error: ' + (err.message || 'No se pudo enviar el correo');
         }
     };
+}
 
-    // =========================
-    // BLOQUEO DE FUNCIONES SOCIALES
-    // =========================
-    function lockSocialFeatures() {
-        document.getElementById('help-input').disabled = !currentUser;
-        document.getElementById('help-send').disabled = !currentUser;
-        document.querySelectorAll('input[id^="input-"], button[data-comment]').forEach(el => el.disabled = !currentUser);
-    }
-    function toggleAds() {
-        if (isVIP) {
-            document.getElementById('ad-left')?.classList.add('hidden');
-            document.getElementById('ad-right')?.classList.add('hidden');
-        } else {
-            document.getElementById('ad-left')?.classList.remove('hidden');
-            document.getElementById('ad-right')?.classList.remove('hidden');
-        }
-    }
-
-    // =========================
-    // CHAT DE AYUDA EN TIEMPO REAL (Firestore)
-    // =========================
-    const helpMessagesDiv = document.getElementById('help-messages');
-    const helpInput = document.getElementById('help-input');
-    const helpSend = document.getElementById('help-send');
+/* =========================
+   CHAT DE AYUDA EN TIEMPO REAL (Firestore)
+   ========================= */
+const helpMessagesDiv = document.getElementById('help-messages');
+const helpInput = document.getElementById('help-input');
+const helpSend = document.getElementById('help-send');
+if (helpSend && helpInput && helpMessagesDiv) {
     helpSend.onclick = async () => {
         if (!currentUser) return;
         const msg = helpInput.value.trim();
@@ -1807,54 +1606,56 @@ function safeGet(id) {
             helpMessagesDiv.innerHTML += `<div class="chat-message mb-1"><b>${d.user}:</b> ${d.msg}</div>`;
         });
     });
+}
 
-    // =========================
-    // COMENTARIOS EN NOTICIAS (Firestore)
-    // =========================
-    window.addComment = async function(newsId, text) {
-        if (!currentUser) return alert('Debes iniciar sesión');
-        if (!text.trim()) return;
-        await addDoc(collection(db, "news-comments"), {
-            newsId,
-            user: currentUser.displayName || currentUser.email,
-            uid: currentUser.uid,
-            text,
-            ts: Date.now()
+/* =========================
+   COMENTARIOS EN NOTICIAS (Firestore)
+   ========================= */
+window.addComment = async function(newsId, text) {
+    if (!currentUser) return alert('Debes iniciar sesión');
+    if (!text.trim()) return;
+    await addDoc(collection(db, "news-comments"), {
+        newsId,
+        user: currentUser.displayName || currentUser.email,
+        uid: currentUser.uid,
+        text,
+        ts: Date.now()
+    });
+    document.getElementById('input-' + newsId).value = '';
+};
+function renderComments(newsId) {
+    const commentsDiv = document.getElementById('comments-' + newsId);
+    if (!commentsDiv) return;
+    onSnapshot(query(collection(db, "news-comments"), orderBy("ts", "desc")), snap => {
+        commentsDiv.innerHTML = '';
+        snap.forEach(doc => {
+            const d = doc.data();
+            if (d.newsId === newsId) {
+                commentsDiv.innerHTML += `<div class="chat-message mb-1"><b>${d.user}:</b> ${d.text}</div>`;
+            }
         });
-        document.getElementById('input-' + newsId).value = '';
-    };
-    function renderComments(newsId) {
-        const commentsDiv = document.getElementById('comments-' + newsId);
-        onSnapshot(query(collection(db, "news-comments"), orderBy("ts", "desc")), snap => {
-            commentsDiv.innerHTML = '';
-            snap.forEach(doc => {
-                const d = doc.data();
-                if (d.newsId === newsId) {
-                    commentsDiv.innerHTML += `<div class="chat-message mb-1"><b>${d.user}:</b> ${d.text}</div>`;
-                }
-            });
-        });
-    }
-    renderComments('news1');
-    // Repite para otras noticias si agregas más
+    });
+}
+renderComments('news1');
+// Repite para otras noticias si agregas más
 
-    // =========================
-    // FORO BÁSICO (Firestore)
-    // =========================
-    // Ejemplo: cargar posts del foro
-    function renderForum() {
-        const forumDiv = document.getElementById('forum');
-        onSnapshot(query(collection(db, "forum-posts"), orderBy("ts", "desc")), snap => {
-            // Aquí puedes renderizar los posts del foro dinámicamente
-            // Ejemplo: forumDiv.innerHTML = ...
-        });
-    }
-    renderForum();
+/* =========================
+   FORO BÁSICO (Firestore)
+   ========================= */
+function renderForum() {
+    const forumDiv = document.getElementById('forum');
+    if (!forumDiv) return;
+    // Aquí puedes renderizar los posts del foro dinámicamente
+    // Ejemplo: forumDiv.innerHTML = ...
+}
+renderForum();
 
-    // =========================
-    // GUARDADO DE PERFIL (Firestore)
-    // =========================
-    document.getElementById('save-profile').onclick = async () => {
+/* =========================
+   GUARDADO DE PERFIL (Firestore)
+   ========================= */
+const saveProfileBtn = document.getElementById('save-profile');
+if (saveProfileBtn) {
+    saveProfileBtn.onclick = async () => {
         if (!currentUser) return;
         const name = document.getElementById('profile-name').value;
         const color = document.getElementById('profile-color').value;
@@ -1863,52 +1664,34 @@ function safeGet(id) {
         alert('Perfil guardado');
         document.getElementById('profile-modal').classList.add('hidden');
     };
-    document.getElementById('close-profile').onclick = () => {
-        document.getElementById('profile-modal').classList.add('hidden');
-    };
+}
+document.getElementById('close-profile')?.addEventListener('click', function() {
+    document.getElementById('profile-modal').classList.add('hidden');
+});
 
-    // =========================
-    // SKINS (solo simulado, para real usa Firebase Storage)
-    // =========================
-    // Puedes subir la skin a Firebase Storage y guardar la URL en Firestore
-    // Aquí solo se simula la selección
-    document.getElementById('skin-upload')?.addEventListener('change', e => {
-        const file = e.target.files[0];
-        if (file) alert('Skin seleccionada: ' + file.name + ' (subida real requiere Storage)');
-    });
+/* =========================
+   SKINS (solo simulado, para real usa Firebase Storage)
+   ========================= */
+document.getElementById('skin-upload')?.addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (file) alert('Skin seleccionada: ' + file.name + ' (subida real requiere Storage)');
+});
 
-    // =========================
-    // SEO: Encabezados dinámicos
-    // =========================
-    document.querySelector('h1').textContent = "Mine Of Servers: Mejores servidores de Minecraft Bedrock y Java";
-    document.title = "Mine Of Servers | Comunidad Minecraft";";
+/* =========================
+   SEO: Encabezados dinámicos
+   ========================= */
+document.querySelector('h1').textContent = "Mine Of Servers: Mejores servidores de Minecraft Bedrock y Java";
+document.title = "Mine Of Servers | Comunidad Minecraft";
 
-    // =========================
-    // RESPONSIVE: No requiere JS, ya está en Tailwind y CSS arriba
-    // =========================
+/* =========================
+   RESPONSIVE: No requiere JS, ya está en Tailwind y CSS arriba
+   ========================= */
 
-    // =========================
-    // MONETIZACIÓN: Ejemplo de botón de donación
-    // =========================
-    // Puedes agregar un botón de PayPal o Ko-fi en el sidebar o footer
-    </script>
-    <!-- ...resto del HTML... -->
+/* =========================
+   MONETIZACIÓN: Ejemplo de botón de donación
+   ========================= */
+// Puedes agregar un botón de PayPal o Ko-fi en el sidebar o footer
+
+</script>
 </body>
 </html>
-
-# Mine Of Servers - Comunidad Minecraft
-
-## Estructura del proyecto
-
-```
-/
-├── public/
-│   ├── index.html
-│   ├── style.css
-│   ├── main.js
-│   ├── firebaseConfig.js
-│   └── assets/
-├── forum/
-│   └── index.html
-└── README.md
-```
