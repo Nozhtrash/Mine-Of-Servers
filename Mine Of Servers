@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
     <!-- SEO Mejorado -->
     <meta name="description" content="Mine Of Servers: Top servidores de Minecraft en español, rankings, foro, skins, comunidad activa.">
     <meta name="keywords" content="Mine Of Servers, servidores Minecraft, Minecraft latino, servidores gratis, ranking Minecraft, skins Minecraft">
@@ -131,61 +131,49 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-    <!-- Encabezado SEO -->
-    <header class="py-6 text-center">
-        <h1 class="text-3xl font-extrabold mb-2">Mine Of Servers: Mejores servidores de Minecraft Bedrock y Java</h1>
-        <p class="text-lg text-gray-300">Ranking, comunidad, skins, mods y foro en español</p>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 min-h-screen">
+    <!-- Encabezado SEO Mejorado -->
+    <header class="py-8 text-center bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 shadow-lg mb-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight flex items-center justify-center gap-4">
+            <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/minecraft-logo.svg" alt="Minecraft Logo" class="h-10 w-10 md:h-14 md:w-14 inline-block drop-shadow-lg animate-bounce">
+            <span>
+                <span class="text-primary">Mine Of Servers</span>
+                <span class="block text-lg md:text-2xl font-semibold text-secondary mt-1">Encuentra, comparte y vota los mejores servidores de Minecraft</span>
+            </span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mt-2 font-medium">Ranking, comunidad, skins, mods y foro en español</p>
+        <div class="flex justify-center mt-4 gap-2">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-700 text-white text-xs font-semibold shadow">Java & Bedrock</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-600 text-white text-xs font-semibold shadow"><i class="fas fa-crown mr-1"></i> Comunidad VIP</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-700 text-white text-xs font-semibold shadow"><i class="fas fa-users mr-1"></i> +24,000 jugadores online</span>
+        </div>
     </header>
-    <!-- Navbar -->
-    <nav class="bg-gray-800 shadow-lg">
+
+    <!-- Navbar Mejorado -->
+    <nav class="bg-gray-900/90 shadow-lg sticky top-0 z-40 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <img class="h-8 w-8" src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/minecraft-logo.svg" alt="Minecraft Logo">
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-900 text-white">Inicio</a>
-                            <a href="#servers" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Servidores</a>
-                            <a href="#news" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Noticias</a>
-                            <a href="#forum" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Foro</a>
-                            <a href="#events" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Eventos</a>
-                            <a href="#mods" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mods</a>
-                            <a href="#essential" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Essential</a>
-                        </div>
-                    </div>
+                <div class="flex items-center gap-2">
+                    <img class="h-8 w-8" src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/minecraft-logo.svg" alt="Minecraft Logo">
+                    <span class="font-bold text-lg text-primary hidden sm:inline">Mine Of Servers</span>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-4 flex items-center md:ml-6 space-x-4">
-                        <button id="language-toggle" class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                            <i class="fas fa-globe mr-1"></i> ES
-                        </button>
-                        <button class="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                            <span class="sr-only">Notificaciones</span>
-                            <i class="fas fa-bell h-6 w-6"></i>
-                        </button>
-                        <div class="ml-3 relative">
-                            <div>
-                                <button id="user-menu" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-expanded="false" aria-haspopup="true">
-                                    <span class="sr-only">Abrir menú usuario</span>
-                                    <img class="h-8 w-8 rounded-full" src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar">
-                                </button>
-                            </div>
-                            <div id="user-dropdown" class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                                <a href="#profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tu perfil</a>
-                                <a href="#settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Configuración</a>
-                                <a href="#logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cerrar sesión</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hidden md:flex gap-2">
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium bg-primary text-white shadow hover:scale-105 transition">Inicio</a>
+                    <a href="#servers" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition">Servidores</a>
+                    <a href="#news" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition">Noticias</a>
+                    <a href="#forum" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition">Foro</a>
+                    <a href="#events" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition">Eventos</a>
+                    <a href="#mods" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition">Mods</a>
+                    <a href="#essential" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition">Essential</a>
                 </div>
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Abrir menú principal</span>
-                        <i class="fas fa-bars h-6 w-6"></i>
+                <div class="flex items-center gap-2">
+                    <button id="language-toggle" class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm flex items-center gap-1 transition">
+                        <i class="fas fa-globe"></i> <span>ES</span>
                     </button>
+                    <button id="open-auth-modal" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded shadow transition">Iniciar Sesión</button>
+                    <button id="login-google" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded shadow hidden transition"><i class="fab fa-google mr-1"></i> Google</button>
+                    <button id="logout" class="bg-gray-600 hover:bg-gray-700 text-white px-3 py-1 rounded shadow hidden transition">Logout</button>
+                    <span id="user-info" class="text-sm text-gray-300 ml-2"></span>
                 </div>
             </div>
         </div>
@@ -193,891 +181,1334 @@
 
     <!-- Agrega esto en tu navbar o donde quieras el login/logout -->
     <div id="auth-section" class="flex items-center space-x-2">
-        <button id="login-google" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded">Login Google</button>
+        <button id="open-auth-modal" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded">Iniciar Sesión</button>
+        <button id="login-google" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded hidden">Login Google</button>
         <button id="logout" class="bg-gray-600 hover:bg-gray-700 text-white px-3 py-1 rounded hidden">Logout</button>
         <span id="user-info" class="text-sm text-gray-300 ml-2"></span>
     </div>
 
     <!-- Main Content -->
-    <main>
-        <aside> <!-- Sidebar izquierda --> 
-            <div class="lg:col-span-1 space-y-6">
-                <!-- Search Filters -->
-                <div class="bg-gray-800 rounded-lg shadow p-4">
-                    <div class="flex mb-4">
-                        <button id="java-tab" class="server-type-tab active flex-1 py-1 px-3 rounded-l-md text-sm font-medium">Java</button>
-                        <button id="bedrock-tab" class="server-type-tab flex-1 py-1 px-3 rounded-r-md text-sm font-medium bg-gray-700">Bedrock</button>
-                    </div>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-1">Versión</label>
-                            <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md bg-gray-700 text-white">
-                                <option>Todas</option>
-                                <option>1.20</option>
-                                <option>1.19</option>
-                                <option>1.18</option>
-                                <option>1.17</option>
-                                <option>1.16</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-1">Modo de Juego</label>
-                            <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md bg-gray-700 text-white">
-                                <option>Todos</option>
-                                <option>Survival</option>
-                                <option>Creative</option>
-                                <option>Skyblock</option>
-                                <option>Prison</option>
-                                <option>Factions</option>
-                                <option>Minigames</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-1">País</label>
-                            <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md bg-gray-700 text-white">
-                                <option>Todos</option>
-                                <option>España</option>
-                                <option>México</option>
-                                <option>Argentina</option>
-                                <option>Colombia</option>
-                                <option>Chile</option>
-                                <option>Estados Unidos</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-1">Jugadores</label>
-                            <div class="flex items-center space-x-2">
-                                <input type="number" placeholder="Mínimo" class="w-1/2 px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                                <input type="number" placeholder="Máximo" class="w-1/2 px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                        </div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-300">
-                            <i class="fas fa-filter mr-2"></i> Aplicar Filtros
-                        </button>
+    <div class="container mx-auto px-4 py-6 flex gap-6">
+        <!-- Sidebar Izquierda -->
+        <aside class="w-72 flex-shrink-0 bg-gray-800 rounded-xl border border-gray-700 p-4 flex flex-col gap-6">
+            <!-- Perfil de usuario arriba a la izquierda -->
+            <div id="main-profile" class="cursor-pointer hover:bg-gray-700 rounded-lg p-3 transition" onclick="goToProfile('Usuario123')">
+                <div class="flex items-center gap-3">
+                    <img class="h-12 w-12 rounded-full border-2 border-blue-600" src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar">
+                    <div>
+                        <h5 class="font-bold">Usuario123</h5>
+                        <p class="text-xs text-gray-400">"El Minero"</p>
+                        <span class="px-2 py-0.5 text-xs rounded bg-yellow-600 text-white">VIP</span>
                     </div>
                 </div>
-
-                <!-- Advertisement (hidden for VIP) -->
-                <div id="ad-left" class="bg-gray-800 rounded-lg shadow overflow-hidden">
-                    <div class="p-4 bg-gradient-to-r from-purple-600 to-blue-600">
-                        <h4 class="text-white font-bold text-center">PUBLICIDAD</h4>
-                    </div>
-                    <div class="p-4">
-                        <a href="#" class="block">
-                            <img src="https://via.placeholder.com/300x250?text=Anuncio" alt="Advertisement" class="w-full rounded">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Stats -->
-                <div class="bg-gray-800 rounded-lg shadow p-4">
-                    <h3 class="text-lg font-medium mb-4">Estadísticas Rápidas</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Servidores totales:</span>
-                            <span class="font-medium">1,248</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Jugadores online:</span>
-                            <span class="font-medium">24,576</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Versión más popular:</span>
-                            <span class="font-medium">1.20</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Nuevos hoy:</span>
-                            <span class="font-medium">12</span>
-                        </div>
-                    </div>
+                <div class="flex gap-2 mt-2 text-xs text-gray-400">
+                    <span>Favoritos: <b>24</b></span>
+                    <span>Votos: <b>156</b></span>
+                    <span>Servers: <b>3</b></span>
                 </div>
             </div>
-        </aside>
-        <section id="servers"> 
-            <div class="lg:col-span-2 space-y-6">
-                <!-- Server List Header -->
-                <div id="servers" class="bg-gray-800 rounded-lg shadow p-4">
-                    <div class="flex justify-between items-center">
-                        <h2 class="text-xl font-bold">Servidores de Minecraft</h2>
-                        <div class="flex space-x-2">
-                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                                <i class="fas fa-sync-alt mr-1"></i> Actualizar
-                            </button>
-                            <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
-                                <i class="fas fa-plus mr-1"></i> Añadir Servidor
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Server List -->
-                <div class="space-y-4" id="server-list">
-                    <!-- Server Card 1 -->
-                    <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('hypixel')">
-                        <div class="p-4">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 relative">
-                                    <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server1" alt="Server icon">
-                                    <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800 pulse-online"></div>
-                                </div>
-                                <div class="ml-4 flex-1">
-                                    <div class="flex items-center justify-between">
-                                        <div>
-                                            <h3 class="text-lg font-bold">Hypixel Network</h3>
-                                            <p class="text-xs text-gray-400">mc.hypixel.net</p>
-                                        </div>
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            24,576/50,000
-                                        </span>
-                                    </div>
-                                    <div class="mt-1 flex items-center text-sm text-gray-400">
-                                        <span class="mr-3">1.8 - 1.20</span>
-                                        <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> EE.UU.</span>
-                                        <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.9</span>
-                                    </div>
-                                    <p class="mt-2 text-sm text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más.</p>
-                                    <div class="mt-3 flex items-center justify-between">
-                                        <div class="flex space-x-2">
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Survival</span>
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Competitivo</span>
-                                        </div>
-                                        <button class="text-blue-400 hover:text-blue-300">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Server Card 2 -->
-                    <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('mineplex')">
-                        <div class="p-4">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 relative">
-                                    <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server2" alt="Server icon">
-                                    <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
-                                </div>
-                                <div class="ml-4 flex-1">
-                                    <div class="flex items-center justify-between">
-                                        <div>
-                                            <h3 class="text-lg font-bold">Mineplex</h3>
-                                            <p class="text-xs text-gray-400">play.mineplex.com</p>
-                                        </div>
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            5,342/10,000
-                                        </span>
-                                    </div>
-                                    <div class="mt-1 flex items-center text-sm text-gray-400">
-                                        <span class="mr-3">1.12 - 1.20</span>
-                                        <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> Global</span>
-                                        <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.5</span>
-                                    </div>
-                                    <p class="mt-2 text-sm text-gray-300">Diversión sin límites con nuestros exclusivos minijuegos y una gran comunidad.</p>
-                                    <div class="mt-3 flex items-center justify-between">
-                                        <div class="flex space-x-2">
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Arcade</span>
-                                        </div>
-                                        <button class="text-blue-400 hover:text-blue-300">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Server Card 3 -->
-                    <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('hive')">
-                        <div class="p-4">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 relative">
-                                    <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server3" alt="Server icon">
-                                    <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
-                                </div>
-                                <div class="ml-4 flex-1">
-                                    <div class="flex items-center justify-between">
-                                        <div>
-                                            <h3 class="text-lg font-bold">The Hive</h3>
-                                            <p class="text-xs text-gray-400">play.hivemc.com</p>
-                                        </div>
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            3,245/8,000
-                                        </span>
-                                    </div>
-                                    <div class="mt-1 flex items-center text-sm text-gray-400">
-                                        <span class="mr-3">1.16 - 1.20</span>
-                                        <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> Europa</span>
-                                        <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.3</span>
-                                    </div>
-                                    <p class="mt-2 text-sm text-gray-300">Disfruta de Hide and Seek, DeathRun y otros minijuegos exclusivos.</p>
-                                    <div class="mt-3 flex items-center justify-between">
-                                        <div class="flex space-x-2">
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Familiar</span>
-                                        </div>
-                                        <button class="text-blue-400 hover:text-blue-300">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Server Card 4 -->
-                    <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('cubecraft')">
-                        <div class="p-4">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 relative">
-                                    <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server4" alt="Server icon">
-                                    <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
-                                </div>
-                                <div class="ml-4 flex-1">
-                                    <div class="flex items-center justify-between">
-                                        <div>
-                                            <h3 class="text-lg font-bold">Cubecraft Games</h3>
-                                            <p class="text-xs text-gray-400">play.cubecraft.net</p>
-                                        </div>
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            2,876/6,000
-                                        </span>
-                                    </div>
-                                    <div class="mt-1 flex items-center text-sm text-gray-400">
-                                        <span class="mr-3">1.12 - 1.20</span>
-                                        <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> Reino Unido</span>
-                                        <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.2</span>
-                                    </div>
-                                    <p class="mt-2 text-sm text-gray-300">Minijuegos únicos y emocionantes en una plataforma amigable para todos.</p>
-                                    <div class="mt-3 flex items-center justify-between">
-                                        <div class="flex space-x-2">
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
-                                            <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Bedrock</span>
-                                        </div>
-                                        <button class="text-blue-400 hover:text-blue-300">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="bg-gray-800 rounded-lg shadow p-4">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-sm text-gray-400">
-                                    Mostrando <span class="font-medium">1</span> a <span class="font-medium">4</span> de <span class="font-medium">1248</span> servidores
-                                </p>
-                            </div>
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm disabled:opacity-50" disabled>
-                                    <i class="fas fa-chevron-left"></i>
-                                </button>
-                                <button class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm">1</button>
-                                <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">2</button>
-                                <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">3</button>
-                                <span class="px-3 py-1">...</span>
-                                <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">25</button>
-                                <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="news"> 
-            <div class="news-content bg-gray-800 rounded-lg shadow p-4 mt-8">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold">Noticias de Minecraft</h2>
-                    <div class="flex space-x-2">
-                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                            Java Edition
-                        </button>
-                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                            Bedrock Edition
-                        </button>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- News Card 1 -->
-                    <div class="news-card bg-gray-700 rounded-lg shadow overflow-hidden transition duration-300">
-                        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/creeper-update-mobile.jpg" alt="News image" class="w-full h-32 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-bold">Actualización 1.20: Trails & Tales</h3>
-                            <p class="text-sm text-gray-300 mt-1">Descubre los nuevos biomas, mobs y características en la última actualización.</p>
-                            <div class="flex items-center mt-3 text-xs text-gray-400">
-                                <span>Publicado: 07/06/2023</span>
-                                <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">Java</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- En cada sección de comentarios -->
-                    <div id="comments-news1"></div>
-                    <input id="input-news1" type="text" placeholder="Escribe un comentario..." class="w-full px-2 py-1 rounded bg-gray-700 text-white mt-2">
-                    <button onclick="addComment('news1', document.getElementById('input-news1').value)">Comentar</button>
-                    <!-- News Card 2 -->
-                    <div class="news-card bg-gray-700 rounded-lg shadow overflow-hidden transition duration-300">
-                        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/nether-update-mobile.jpg" alt="News image" class="w-full h-32 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-bold">Nuevas características en Bedrock</h3>
-                            <p class="text-sm text-gray-300 mt-1">Mejoras de rendimiento y nuevas opciones de personalización.</p>
-                            <div class="flex items-center mt-3 text-xs text-gray-400">
-                                <span>Publicado: 15/06/2023</span>
-                                <span class="ml-auto bg-green-600 text-white px-2 py-0.5 rounded">Bedrock</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 text-center">
-                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todas las noticias →</a>
-                </div>
-            </div>
-        </section>
-        <section id="forum"> 
-            <div id="forum" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold">Foro de la Comunidad</h2>
-                    <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
-                        <i class="fas fa-plus mr-1"></i> Nuevo Tema
-                    </button>
+            <!-- Search Filters -->
+            <div class="bg-gray-800 rounded-lg shadow p-4">
+                <div class="flex mb-4">
+                    <button id="java-tab" class="server-type-tab active flex-1 py-1 px-3 rounded-l-md text-sm font-medium">Java</button>
+                    <button id="bedrock-tab" class="server-type-tab flex-1 py-1 px-3 rounded-r-md text-sm font-medium bg-gray-700">Bedrock</button>
                 </div>
                 <div class="space-y-4">
-                    <!-- Forum Category -->
-                    <div class="bg-gray-700 rounded-lg overflow-hidden">
-                        <div class="bg-gray-600 px-4 py-2">
-                            <h3 class="font-bold">Servidores</h3>
-                        </div>
-                        <div class="divide-y divide-gray-600">
-                            <!-- Forum Post 1 -->
-                            <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
-                                <div class="flex items-start">
-                                    <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
-                                    <div class="ml-3 flex-1">
-                                        <div class="flex items-center">
-                                            <h4 class="font-medium">¿Recomendaciones de servidores Survival técnico?</h4>
-                                            <span class="ml-auto text-xs text-gray-400">15 respuestas</span>
-                                        </div>
-                                        <div class="flex items-center mt-1 text-xs text-gray-400">
-                                            <span>Por <span class="text-blue-400">Usuario123</span></span>
-                                            <span class="ml-3">Hoy 10:45 AM</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Forum Post 2 -->
-                            <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
-                                <div class="flex items-start">
-                                    <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
-                                    <div class="ml-3 flex-1">
-                                        <div class="flex items-center">
-                                            <h4 class="font-medium">Mi experiencia en Hypixel esta semana</h4>
-                                            <span class="ml-auto text-xs text-gray-400">24 respuestas</span>
-                                        </div>
-                                        <div class="flex items-center mt-1 text-xs text-gray-400">
-                                            <span>Por <span class="vip-name">AlexMiner</span></span>
-                                            <span class="ml-3">Ayer 4:30 PM</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Versión</label>
+                        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md bg-gray-700 text-white">
+                            <option>Todas</option>
+                            <option>1.20</option>
+                            <option>1.19</option>
+                            <option>1.18</option>
+                            <option>1.17</option>
+                            <option>1.16</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Modo de Juego</label>
+                        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md bg-gray-700 text-white">
+                            <option>Todos</option>
+                            <option>Survival</option>
+                            <option>Creative</option>
+                            <option>Skyblock</option>
+                            <option>Prison</option>
+                            <option>Factions</option>
+                            <option>Minigames</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">País</label>
+                        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md bg-gray-700 text-white">
+                            <option>Todos</option>
+                            <option>España</option>
+                            <option>México</option>
+                            <option>Argentina</option>
+                            <option>Colombia</option>
+                            <option>Chile</option>
+                            <option>Estados Unidos</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Jugadores</label>
+                        <div class="flex items-center space-x-2">
+                            <input type="number" placeholder="Mínimo" class="w-1/2 px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <input type="number" placeholder="Máximo" class="w-1/2 px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         </div>
                     </div>
-                    <!-- Forum Category -->
-                    <div class="bg-gray-700 rounded-lg overflow-hidden">
-                        <div class="bg-gray-600 px-4 py-2">
-                            <h3 class="font-bold">Eventos</h3>
-                        </div>
-                        <div class="divide-y divide-gray-600">
-                            <!-- Forum Post 1 -->
-                            <div class="forum-post p-3 hover:bg-gray-600 cursor-pointer">
-                                <div class="flex items-start">
-                                    <img src="https://mc-heads.net/avatar/MHF_Enderman" alt="User avatar" class="h-8 w-8 rounded-full">
-                                    <div class="ml-3 flex-1">
-                                        <div class="flex items-center">
-                                            <h4 class="font-medium">Torneo de PvP este fin de semana</h4>
-                                            <span class="ml-auto text-xs text-gray-400">8 respuestas</span>
-                                        </div>
-                                        <div class="flex items-center mt-1 text-xs text-gray-400">
-                                            <span>Por <span class="vip-name">EndyGuy</span></span>
-                                            <span class="ml-3">Ayer 1:15 PM</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 text-center">
-                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todo el foro →</a>
-                </div>
-            </div>
-        </section>
-        <section id="mods"> 
-            <div id="mods" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold">Mods Populares</h2>
-                    <div class="flex space-x-2">
-                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                            Java
-                        </button>
-                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
-                            Bedrock
-                        </button>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Mod Card 1 -->
-                    <div class="bg-gray-700 rounded-lg shadow p-4">
-                        <div class="flex items-start">
-                            <img src="https://via.placeholder.com/64?text=Mod1" alt="Mod icon" class="h-12 w-12 rounded">
-                            <div class="ml-3">
-                                <h3 class="font-bold">OptiFine</h3>
-                                <p class="text-sm text-gray-300 mt-1">Mejora el rendimiento y añade soporte para shaders HD.</p>
-                                <div class="flex items-center mt-2 text-xs text-gray-400">
-                                    <span>Descargas: 10M+</span>
-                                    <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">1.20</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mod Card 2 -->
-                    <div class="bg-gray-700 rounded-lg shadow p-4">
-                        <div class="flex items-start">
-                            <img src="https://via.placeholder.com/64?text=Mod2" alt="Mod icon" class="h-12 w-12 rounded">
-                            <div class="ml-3">
-                                <h3 class="font-bold">Create</h3>
-                                <p class="text-sm text-gray-300 mt-1">Añade máquinas y sistemas mecánicos avanzados.</p>
-                                <div class="flex items-center mt-2 text-xs text-gray-400">
-                                    <span>Descargas: 5M+</span>
-                                    <span class="ml-auto bg-blue-600 text-white px-2 py-0.5 rounded">1.19</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 text-center">
-                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todos los mods →</a>
-                </div>
-            </div>
-        </section>
-        <section id="essential"> 
-            <div id="essential" class="bg-gray-800 rounded-lg shadow p-4 mt-8">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold">Servidores Essential</h2>
-                    <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
-                        <i class="fas fa-plus mr-1"></i> Crear Server
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-300">
+                        <i class="fas fa-filter mr-2"></i> Aplicar Filtros
                     </button>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Essential Server 1 -->
-                    <div class="bg-gray-700 rounded-lg shadow p-4">
-                        <div class="flex items-start">
-                            <img src="https://mc-heads.net/avatar/MHF_Steve" alt="Owner avatar" class="h-10 w-10 rounded-full">
-                            <div class="ml-3">
-                                <h3 class="font-bold">Survival Amigos</h3>
-                                <p class="text-sm text-gray-300 mt-1">Jugadores: 3/10</p>
-                                <div class="flex items-center mt-2 text-xs text-gray-400">
-                                    <span>Dueño: Usuario123</span>
-                                    <span class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded">Online</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Essential Server 2 -->
-                    <div class="bg-gray-700 rounded-lg shadow p-4">
-                        <div class="flex items-start">
-                            <img src="https://mc-heads.net/avatar/MHF_Alex" alt="Owner avatar" class="h-10 w-10 rounded-full">
-                            <div class="ml-3">
-                                <h3 class="font-bold">Construcción Creativa</h3>
-                                <p class="text-sm text-gray-300 mt-1">Jugadores: 5/10</p>
-                                <div class="flex items-center mt-2 text-xs text-gray-400">
-                                    <span>Dueño: AlexMiner</span>
-                                    <span class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded">Online</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <!-- Advertisement (hidden for VIP) -->
+            <div id="ad-left" class="bg-gray-800 rounded-lg shadow overflow-hidden">
+                <div class="p-4 bg-gradient-to-r from-purple-600 to-blue-600">
+                    <h4 class="text-white font-bold text-center">PUBLICIDAD</h4>
                 </div>
-                <div class="mt-4 text-center">
-                    <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Ver todos los servidores →</a>
+                <div class="p-4">
+                    <a href="#" class="block">
+                        <img src="https://via.placeholder.com/300x250?text=Anuncio" alt="Advertisement" class="w-full rounded">
+                    </a>
                 </div>
             </div>
-        </section>
-        <aside> <!-- Sidebar derecha --> 
-            <div class="lg:col-span-1 space-y-6">
-                <!-- User Profile -->
-                <div id="profile" class="bg-gray-800 rounded-lg shadow overflow-hidden">
-                    <div class="p-4 bg-gradient-to-r from-blue-600 to-indigo-600">
-                        <h4 class="text-white font-bold text-center">TU PERFIL</h4>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="relative">
-                                <img class="h-16 w-16 rounded-full" src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar">
-                                <div class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
-                            </div>
-                            <div>
-                                <h5 class="font-bold">Usuario123</h5>
-                                <p class="text-sm text-gray-400">Apodo: "El Minero"</p>
-                                <p class="text-sm text-gray-400">Miembro desde: Jun 2023</p>
-                                <div class="flex space-x-2 mt-1">
-                                    <span class="px-2 py-0.5 text-xs rounded bg-yellow-600 text-white">VIP</span>
-                                    <span class="px-2 py-0.5 text-xs rounded bg-gray-700 text-gray-300">Premium: Sí</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-4 grid grid-cols-3 gap-2 text-center">
-                            <div class="bg-gray-700 p-2 rounded">
-                                <div class="text-lg font-bold">24</div>
-                                <div class="text-xs text-gray-400">Favoritos</div>
-                            </div>
-                            <div class="bg-gray-700 p-2 rounded">
-                                <div class="text-lg font-bold">156</div>
-                                <div class="text-xs text-gray-400">Votos</div>
-                            </div>
-                            <div class="bg-gray-700 p-2 rounded">
-                                <div class="text-lg font-bold">3</div>
-                                <div class="text-xs text-gray-400">Servers</div>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-300">
-                                <i class="fas fa-user-edit mr-1"></i> Editar Perfil
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Discord Feed -->
-                <div class="bg-gray-800 rounded-lg shadow overflow-hidden">
-                    <div class="p-4 bg-gradient-to-r from-indigo-600 to-purple-600">
-                        <h4 class="text-white font-bold text-center">DISCORD</h4>
+            <!-- Quick Stats -->
+            <div class="bg-gray-800 rounded-lg shadow p-4">
+                <h3 class="text-lg font-medium mb-4">Estadísticas Rápidas</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">Servidores totales:</span>
+                        <span class="font-medium">1,248</span>
                     </div>
-                    <div class="p-4">
-                        <div class="h-64 overflow-y-auto mb-4 space-y-3" id="discord-messages">
-                            <!-- Discord messages will be loaded here -->
-                            <div class="chat-message p-2 rounded-md transition">
-                                <div class="flex items-start">
-                                    <img class="h-6 w-6 rounded-full" src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar">
-                                    <div class="ml-2">
-                                        <span class="font-bold text-sm">AlexMiner</span>
-                                        <p class="text-sm">¡Nuevo evento este fin de semana en nuestro servidor Essential!</p>
-                                        <div class="text-xs text-gray-400 mt-1">Hoy 10:30 AM</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat-message p-2 rounded-md transition">
-                                <div class="flex items-start">
-                                    <img class="h-6 w-6 rounded-full" src="https://mc-heads.net/avatar/MHF_Enderman" alt="User avatar">
-                                    <div class="ml-2">
-                                        <span class="vip-name text-sm">EndyGuy</span>
-                                        <p class="text-sm">¿Alguien quiere unirse a mi mundo para construir una ciudad medieval?</p>
-                                        <div class="text-xs text-gray-400 mt-1">Hoy 9:45 AM</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat-message p-2 rounded-md transition">
-                                <div class="flex items-start">
-                                    <img class="h-6 w-6 rounded-full" src="https://mc-heads.net/avatar/MHF_Creeper" alt="User avatar">
-                                    <div class="ml-2">
-                                        <span class="font-bold text-sm">CreeperNoBoom</span>
-                                        <p class="text-sm">Acabo de subir un tutorial de redstone en YouTube, búsquenme como CreeperTech!</p>
-                                        <div class="text-xs text-gray-400 mt-1">Ayer 8:20 PM</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm">Únete a nuestro Discord →</a>
-                        </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">Jugadores online:</span>
+                        <span class="font-medium">24,576</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">Versión más popular:</span>
+                        <span class="font-medium">1.20</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">Nuevos hoy:</span>
+                        <span class="font-medium">12</span>
                     </div>
                 </div>
-
-                <!-- Skins Manager -->
-                <div class="bg-gray-800 rounded-lg shadow overflow-hidden">
-                    <div class="p-4 bg-gradient-to-r from-purple-600 to-pink-600">
-                        <h4 class="text-white font-bold text-center">TUS SKINS</h4>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex overflow-x-auto pb-2 mb-4">
-                            <button class="tab-active pb-2 px-2 text-sm font-medium whitespace-nowrap">Skin 1</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 2</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 3</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 4</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 5</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 6</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 7</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 8</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 9</button>
-                            <button class="pb-2 px-2 text-sm font-medium text-gray-400 hover:text-white whitespace-nowrap">Skin 10</button>
-                        </div>
-                        <div class="skin-preview h-32 rounded-md flex items-center justify-center mb-4">
-                            <img id="skin-preview-img" src="https://mc-heads.net/body/MHF_Steve" alt="Skin preview" class="h-28">
-                        </div>
-                        <div class="space-y-3">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-1">Subir Skin (PNG)</label>
-                                <div class="flex items-center">
-                                    <input type="file" accept=".png" class="hidden" id="skin-upload">
-                                    <label for="skin-upload" class="flex-1 bg-gray-700 text-gray-300 py-2 px-3 rounded-md text-sm cursor-pointer truncate">Seleccionar archivo...</label>
-                                    <button class="ml-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-md text-sm">
-                                        <i class="fas fa-upload"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-1">Capa (PNG)</label>
-                                <div class="flex items-center">
-                                    <input type="file" accept=".png" class="hidden" id="layer-upload">
-                                    <label for="layer-upload" class="flex-1 bg-gray-700 text-gray-300 py-2 px-3 rounded-md text-sm cursor-pointer truncate">Seleccionar capa...</label>
-                                    <button class="ml-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-md text-sm">
-                                        <i class="fas fa-upload"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <button class="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-md text-sm">
-                                    <i class="fas fa-save mr-1"></i> Guardar
-                                </button>
-                                <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-md text-sm">
-                                    <i class="fas fa-sync-alt mr-1"></i> Actualizar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Theme Customizer (VIP only) -->
-                <div id="theme-customizer" class="bg-gray-800 rounded-lg shadow overflow-hidden">
-                    <div class="p-4 bg-gradient-to-r from-pink-600 to-red-600">
-                        <h4 class="text-white font-bold text-center">PERSONALIZAR TEMA</h4>
-                    </div>
-                    <div class="p-4">
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Color Principal</label>
-                            <div class="flex flex-wrap gap-2">
-                                <div class="theme-color-option bg-blue-600 selected" data-color="blue"></div>
-                                <div class="theme-color-option bg-green-600" data-color="green"></div>
-                                <div class="theme-color-option bg-purple-600" data-color="purple"></div>
-                                <div class="theme-color-option bg-red-600" data-color="red"></div>
-                                <div class="theme-color-option bg-yellow-600" data-color="yellow"></div>
-                                <div class="theme-color-option bg-pink-600" data-color="pink"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Color Secundario</label>
-                            <div class="flex flex-wrap gap-2">
-                                <div class="theme-color-option bg-green-600 selected" data-color="green"></div>
-                                <div class="theme-color-option bg-blue-600" data-color="blue"></div>
-                                <div class="theme-color-option bg-purple-600" data-color="purple"></div>
-                                <div class="theme-color-option bg-teal-600" data-color="teal"></div>
-                                <div class="theme-color-option bg-indigo-600" data-color="indigo"></div>
-                                <div class="theme-color-option bg-amber-600" data-color="amber"></div>
-                            </div>
-                        </div>
-                        <button class="w-full mt-4 bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition duration-300">
-                            <i class="fas fa-palette mr-1"></i> Aplicar Tema
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Advertisement (hidden for VIP) -->
-                <div id="ad-right" class="bg-gray-800 rounded-lg shadow overflow-hidden">
-                    <div class="p-4 bg-gradient-to-r from-yellow-600 to-amber-600">
-                        <h4 class="text-white font-bold text-center">PUBLICIDAD</h4>
-                    </div>
-                    <div class="p-4">
-                        <a href="#" class="block">
-                            <img src="https://via.placeholder.com/300x100?text=Anuncio" alt="Advertisement" class="w-full rounded">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Enlaces sociales en el footer o sidebar -->
-                <div class="flex space-x-4">
-                    <a href="https://discord.gg/tu-servidor" target="_blank" class="text-blue-400"><i class="fab fa-discord"></i> Discord</a>
-                    <a href="https://twitter.com/tu-cuenta" target="_blank" class="text-blue-400"><i class="fab fa-twitter"></i> Twitter</a>
-                </div>
-                <!-- Widget Discord (opcional) -->
-                <iframe src="https://discord.com/widget?id=TU_ID&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
             </div>
         </aside>
-    </main>
 
-    <!-- Server Profile Modal -->
-    <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h2 class="text-2xl font-bold">Hypixel Network</h2>
-                        <p class="text-sm text-gray-400">mc.hypixel.net</p>
+        <!-- Contenido principal -->
+        <main class="flex-1 flex flex-col gap-6">
+            <!-- Server List Header -->
+            <div id="servers" class="bg-gray-800 rounded-lg shadow p-4">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-bold">Servidores de Minecraft</h2>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
+                            <i class="fas fa-sync-alt mr-1"></i> Actualizar
+                        </button>
+                        <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded-md text-sm">
+                            <i class="fas fa-plus mr-1"></i> Añadir Servidor
+                        </button>
                     </div>
-                    <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
-                        <i class="fas fa-times"></i>
-                    </button>
                 </div>
-                
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="md:col-span-2">
-                        <div class="bg-gray-700 rounded-lg p-4">
-                            <h3 class="text-lg font-bold mb-2">Descripción</h3>
-                            <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
-                        </div>
-                        
-                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
-                            <h3 class="text-lg font-bold mb-2">Detalles</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <p class="text-sm text-gray-400">Versiones soportadas:</p>
-                                    <p class="font-medium">1.8 - 1.20</p>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-400">País:</p>
-                                    <p class="font-medium">Estados Unidos</p>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-400">Jugadores online:</p>
-                                    <p class="font-medium">24,576/50,000</p>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-400">Rating:</p>
-                                    <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
-                                </div>
+            </div>
+
+            <!-- Server List -->
+            <div class="space-y-4" id="server-list">
+                <!-- Server Card 1 -->
+                <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('hypixel')">
+                    <div class="p-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 relative">
+                                <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server1" alt="Server icon">
+                                <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800 pulse-online"></div>
                             </div>
-                        </div>
-                        
-                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
-                            <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
-                                <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
-                                <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
-                                <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
-                                <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
-                                <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="bg-gray-700 rounded-lg p-4">
-                            <div class="flex justify-center">
-                                <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
-                            </div>
-                            <div class="mt-4 flex justify-between">
-                                <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
-                                    <i class="fas fa-heart mr-1"></i> Favorito
-                                </button>
-                                <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
-                                    <i class="fas fa-play mr-1"></i> Conectar
-                                </button>
-                            </div>
-                            <div class="mt-4">
-                                <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
-                                    <i class="fas fa-share-alt mr-1"></i> Compartir
-                                </button>
-                            </div>
-                            <div class="mt-4">
-                                <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
-                                    <i class="fas fa-star mr-1"></i> Votar
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
-                            <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
-                            <div class="space-y-2">
-                                <div>
-                                    <p class="text-sm text-gray-400">Votos este mes:</p>
-                                    <p class="font-medium">12,456</p>
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-bold">Hypixel Network</h3>
+                                        <p class="text-xs text-gray-400">mc.hypixel.net</p>
+                                    </div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        24,576/50,000
+                                    </span>
                                 </div>
-                                <div>
-                                    <p class="text-sm text-gray-400">Última actualización:</p>
-                                    <p class="font-medium">Hace 2 horas</p>
+                                <div class="mt-1 flex items-center text-sm text-gray-400">
+                                    <span class="mr-3">1.8 - 1.20</span>
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> EE.UU.</span>
+                                    <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.9</span>
                                 </div>
-                                <div>
-                                    <p class="text-sm text-gray-400">Primera lista:</p>
-                                    <p class="font-medium">Enero 2015</p>
+                                <p class="mt-2 text-sm text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <div class="flex space-x-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Survival</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Competitivo</span>
+                                    </div>
+                                    <button class="text-blue-400 hover:text-blue-300">
+                                        <i class="far fa-heart"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="mt-6 bg-gray-700 rounded-lg p-4">
-                    <h3 class="text-lg font-bold mb-2">Opiniones</h3>
-                    <div class="space-y-4">
-                        <!-- Review 1 -->
-                        <div class="border-b border-gray-600 pb-4">
-                            <div class="flex items-center">
-                                <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
-                                <div class="ml-2">
-                                    <span class="vip-name">AlexMiner</span>
-                                    <div class="flex">
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                    </div>
-                                </div>
-                                <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+
+                <!-- Server Card 2 -->
+                <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('mineplex')">
+                    <div class="p-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 relative">
+                                <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server2" alt="Server icon">
+                                <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
                             </div>
-                            <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
-                            <div class="signature">
-                                <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-bold">Mineplex</h3>
+                                        <p class="text-xs text-gray-400">play.mineplex.com</p>
+                                    </div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        5,342/10,000
+                                    </span>
+                                </div>
+                                <div class="mt-1 flex items-center text-sm text-gray-400">
+                                    <span class="mr-3">1.12 - 1.20</span>
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> Global</span>
+                                    <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.5</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-300">Diversión sin límites con nuestros exclusivos minijuegos y una gran comunidad.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <div class="flex space-x-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Arcade</span>
+                                    </div>
+                                    <button class="text-blue-400 hover:text-blue-300">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        
-                        <!-- Review 2 -->
-                        <div class="border-b border-gray-600 pb-4">
-                            <div class="flex items-center">
-                                <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
-                                <div class="ml-2">
-                                    <span class="text-blue-400">Usuario456</span>
-                                    <div class="flex">
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <i class="far fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Server Card 3 -->
+                <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('hive')">
+                    <div class="p-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 relative">
+                                <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server3" alt="Server icon">
+                                <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-bold">The Hive</h3>
+                                        <p class="text-xs text-gray-400">play.hivemc.com</p>
                                     </div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        3,245/8,000
+                                    </span>
                                 </div>
-                                <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                <div class="mt-1 flex items-center text-sm text-gray-400">
+                                    <span class="mr-3">1.16 - 1.20</span>
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> Europa</span>
+                                    <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.3</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-300">Disfruta de Hide and Seek, DeathRun y otros minijuegos exclusivos.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <div class="flex space-x-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Familiar</span>
+                                    </div>
+                                    <button class="text-blue-400 hover:text-blue-300">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
                         </div>
-                        
-                        <!-- Add Review Form -->
-                        <div class="pt-4">
-                            <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
-                            <div class="flex mb-2">
-                                <span class="mr-2 text-sm">Rating:</span>
-                                <div class="flex">
-                                    <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
-                                    <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
-                                    <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
-                                    <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
-                                    <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                    </div>
+                </div>
+
+                <!-- Server Card 4 -->
+                <div class="server-card bg-gray-800 rounded-lg shadow overflow-hidden transition duration-300 cursor-pointer" onclick="openServerProfile('cubecraft')">
+                    <div class="p-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 relative">
+                                <img class="h-16 w-16 rounded" src="https://via.placeholder.com/64?text=Server4" alt="Server icon">
+                                <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-4 h-4 border-2 border-gray-800"></div>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-bold">Cubecraft Games</h3>
+                                        <p class="text-xs text-gray-400">play.cubecraft.net</p>
+                                    </div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        2,876/6,000
+                                    </span>
+                                </div>
+                                <div class="mt-1 flex items-center text-sm text-gray-400">
+                                    <span class="mr-3">1.12 - 1.20</span>
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt mr-1"></i> Reino Unido</span>
+                                    <span><i class="fas fa-star mr-1 text-yellow-400"></i> 4.2</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-300">Minijuegos únicos y emocionantes en una plataforma amigable para todos.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <div class="flex space-x-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Minijuegos</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Bedrock</span>
+                                    </div>
+                                    <button class="text-blue-400 hover:text-blue-300">
+                                        <i class="far fa-heart"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
-                            <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
-                                <i class="fas fa-paper-plane mr-1"></i> Enviar
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="bg-gray-800 rounded-lg shadow p-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-400">
+                                Mostrando <span class="font-medium">1</span> a <span class="font-medium">4</span> de <span class="font-medium">1248</span> servidores
+                            </p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm disabled:opacity-50" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm">1</button>
+                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">2</button>
+                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">3</button>
+                            <span class="px-3 py-1">...</span>
+                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">25</button>
+                            <button class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm">
+                                <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Server Profile Modal -->
+            <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold">Hypixel Network</h2>
+                                <p class="text-sm text-gray-400">mc.hypixel.net</p>
+                            </div>
+                            <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Descripción</h3>
+                                    <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Detalles</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Versiones soportadas:</p>
+                                            <p class="font-medium">1.8 - 1.20</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">País:</p>
+                                            <p class="font-medium">Estados Unidos</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Jugadores online:</p>
+                                            <p class="font-medium">24,576/50,000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Rating:</p>
+                                            <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <div class="flex justify-center">
+                                        <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
+                                    </div>
+                                    <div class="mt-4 flex justify-between">
+                                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
+                                            <i class="fas fa-heart mr-1"></i> Favorito
+                                        </button>
+                                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
+                                            <i class="fas fa-play mr-1"></i> Conectar
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-share-alt mr-1"></i> Compartir
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-star mr-1"></i> Votar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Votos este mes:</p>
+                                            <p class="font-medium">12,456</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Última actualización:</p>
+                                            <p class="font-medium">Hace 2 horas</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Primera lista:</p>
+                                            <p class="font-medium">Enero 2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                            <h3 class="text-lg font-bold mb-2">Opiniones</h3>
+                            <div class="space-y-4">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="vip-name">AlexMiner</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
+                                    <div class="signature">
+                                        <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="text-blue-400">Usuario456</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
+                                </div>
+                                
+                                <!-- Add Review Form -->
+                                <div class="pt-4">
+                                    <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
+                                    <div class="flex mb-2">
+                                        <span class="mr-2 text-sm">Rating:</span>
+                                        <div class="flex">
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
+                                    <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
+                                        <i class="fas fa-paper-plane mr-1"></i> Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Server Profile Modal -->
+            <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold">Hypixel Network</h2>
+                                <p class="text-sm text-gray-400">mc.hypixel.net</p>
+                            </div>
+                            <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Descripción</h3>
+                                    <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Detalles</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Versiones soportadas:</p>
+                                            <p class="font-medium">1.8 - 1.20</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">País:</p>
+                                            <p class="font-medium">Estados Unidos</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Jugadores online:</p>
+                                            <p class="font-medium">24,576/50,000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Rating:</p>
+                                            <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <div class="flex justify-center">
+                                        <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
+                                    </div>
+                                    <div class="mt-4 flex justify-between">
+                                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
+                                            <i class="fas fa-heart mr-1"></i> Favorito
+                                        </button>
+                                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
+                                            <i class="fas fa-play mr-1"></i> Conectar
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-share-alt mr-1"></i> Compartir
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-star mr-1"></i> Votar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Votos este mes:</p>
+                                            <p class="font-medium">12,456</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Última actualización:</p>
+                                            <p class="font-medium">Hace 2 horas</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Primera lista:</p>
+                                            <p class="font-medium">Enero 2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                            <h3 class="text-lg font-bold mb-2">Opiniones</h3>
+                            <div class="space-y-4">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="vip-name">AlexMiner</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
+                                    <div class="signature">
+                                        <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="text-blue-400">Usuario456</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
+                                </div>
+                                
+                                <!-- Add Review Form -->
+                                <div class="pt-4">
+                                    <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
+                                    <div class="flex mb-2">
+                                        <span class="mr-2 text-sm">Rating:</span>
+                                        <div class="flex">
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
+                                    <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
+                                        <i class="fas fa-paper-plane mr-1"></i> Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Server Profile Modal -->
+            <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold">Hypixel Network</h2>
+                                <p class="text-sm text-gray-400">mc.hypixel.net</p>
+                            </div>
+                            <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Descripción</h3>
+                                    <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Detalles</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Versiones soportadas:</p>
+                                            <p class="font-medium">1.8 - 1.20</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">País:</p>
+                                            <p class="font-medium">Estados Unidos</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Jugadores online:</p>
+                                            <p class="font-medium">24,576/50,000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Rating:</p>
+                                            <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <div class="flex justify-center">
+                                        <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
+                                    </div>
+                                    <div class="mt-4 flex justify-between">
+                                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
+                                            <i class="fas fa-heart mr-1"></i> Favorito
+                                        </button>
+                                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
+                                            <i class="fas fa-play mr-1"></i> Conectar
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-share-alt mr-1"></i> Compartir
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-star mr-1"></i> Votar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Votos este mes:</p>
+                                            <p class="font-medium">12,456</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Última actualización:</p>
+                                            <p class="font-medium">Hace 2 horas</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Primera lista:</p>
+                                            <p class="font-medium">Enero 2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                            <h3 class="text-lg font-bold mb-2">Opiniones</h3>
+                            <div class="space-y-4">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="vip-name">AlexMiner</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
+                                    <div class="signature">
+                                        <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="text-blue-400">Usuario456</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
+                                </div>
+                                
+                                <!-- Add Review Form -->
+                                <div class="pt-4">
+                                    <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
+                                    <div class="flex mb-2">
+                                        <span class="mr-2 text-sm">Rating:</span>
+                                        <div class="flex">
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
+                                    <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
+                                        <i class="fas fa-paper-plane mr-1"></i> Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Server Profile Modal -->
+            <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold">Hypixel Network</h2>
+                                <p class="text-sm text-gray-400">mc.hypixel.net</p>
+                            </div>
+                            <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Descripción</h3>
+                                    <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Detalles</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Versiones soportadas:</p>
+                                            <p class="font-medium">1.8 - 1.20</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">País:</p>
+                                            <p class="font-medium">Estados Unidos</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Jugadores online:</p>
+                                            <p class="font-medium">24,576/50,000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Rating:</p>
+                                            <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <div class="flex justify-center">
+                                        <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
+                                    </div>
+                                    <div class="mt-4 flex justify-between">
+                                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
+                                            <i class="fas fa-heart mr-1"></i> Favorito
+                                        </button>
+                                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
+                                            <i class="fas fa-play mr-1"></i> Conectar
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-share-alt mr-1"></i> Compartir
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-star mr-1"></i> Votar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Votos este mes:</p>
+                                            <p class="font-medium">12,456</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Última actualización:</p>
+                                            <p class="font-medium">Hace 2 horas</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Primera lista:</p>
+                                            <p class="font-medium">Enero 2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                            <h3 class="text-lg font-bold mb-2">Opiniones</h3>
+                            <div class="space-y-4">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="vip-name">AlexMiner</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
+                                    <div class="signature">
+                                        <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="text-blue-400">Usuario456</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
+                                </div>
+                                
+                                <!-- Add Review Form -->
+                                <div class="pt-4">
+                                    <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
+                                    <div class="flex mb-2">
+                                        <span class="mr-2 text-sm">Rating:</span>
+                                        <div class="flex">
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
+                                    <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
+                                        <i class="fas fa-paper-plane mr-1"></i> Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Server Profile Modal -->
+            <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold">Hypixel Network</h2>
+                                <p class="text-sm text-gray-400">mc.hypixel.net</p>
+                            </div>
+                            <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Descripción</h3>
+                                    <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Detalles</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Versiones soportadas:</p>
+                                            <p class="font-medium">1.8 - 1.20</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">País:</p>
+                                            <p class="font-medium">Estados Unidos</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Jugadores online:</p>
+                                            <p class="font-medium">24,576/50,000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Rating:</p>
+                                            <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
+                                                                       </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <div class="flex justify-center">
+                                        <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
+                                    </div>
+                                    <div class="mt-4 flex justify-between">
+                                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
+                                            <i class="fas fa-heart mr-1"></i> Favorito
+                                        </button>
+                                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
+                                            <i class="fas fa-play mr-1"></i> Conectar
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-share-alt mr-1"></i> Compartir
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-star mr-1"></i> Votar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Votos este mes:</p>
+                                            <p class="font-medium">12,456</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Última actualización:</p>
+                                            <p class="font-medium">Hace 2 horas</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Primera lista:</p>
+                                            <p class="font-medium">Enero 2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                            <h3 class="text-lg font-bold mb-2">Opiniones</h3>
+                            <div class="space-y-4">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="vip-name">AlexMiner</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
+                                    <div class="signature">
+                                        <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="text-blue-400">Usuario456</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
+                                </div>
+                                
+                                <!-- Add Review Form -->
+                                <div class="pt-4">
+                                    <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
+                                    <div class="flex mb-2">
+                                        <span class="mr-2 text-sm">Rating:</span>
+                                        <div class="flex">
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
+                                    <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
+                                        <i class="fas fa-paper-plane mr-1"></i> Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Server Profile Modal -->
+            <div id="server-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold">Hypixel Network</h2>
+                                <p class="text-sm text-gray-400">mc.hypixel.net</p>
+                            </div>
+                            <button onclick="closeServerProfile()" class="text-gray-400 hover:text-white">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Descripción</h3>
+                                    <p class="text-gray-300">El servidor #1 de Minecraft con minijuegos increíbles como Bed Wars, SkyWars y muchos más. Con una comunidad activa y eventos regulares, Hypixel ofrece la mejor experiencia de juego multijugador.</p>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Detalles</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Versiones soportadas:</p>
+                                            <p class="font-medium">1.8 - 1.20</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">País:</p>
+                                            <p class="font-medium">Estados Unidos</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Jugadores online:</p>
+                                            <p class="font-medium">24,576/50,000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Rating:</p>
+                                            <p class="font-medium"><i class="fas fa-star text-yellow-400"></i> 4.9/5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Modos de Juego</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Bed Wars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">SkyWars</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Survival Games</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Murder Mystery</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">Build Battle</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-600 text-gray-300">TNT Games</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-gray-700 rounded-lg p-4">
+                                    <div class="flex justify-center">
+                                        <img src="https://via.placeholder.com/150?text=Hypixel" alt="Server logo" class="h-32 w-32 rounded-full">
+                                    </div>
+                                    <div class="mt-4 flex justify-between">
+                                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-l-md">
+                                            <i class="fas fa-heart mr-1"></i> Favorito
+                                        </button>
+                                        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-r-md">
+                                            <i class="fas fa-play mr-1"></i> Conectar
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-share-alt mr-1"></i> Compartir
+                                        </button>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md">
+                                            <i class="fas fa-star mr-1"></i> Votar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                                    <h3 class="text-lg font-bold mb-2">Estadísticas</h3>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-sm text-gray-400">Votos este mes:</p>
+                                            <p class="font-medium">12,456</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Última actualización:</p>
+                                            <p class="font-medium">Hace 2 horas</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Primera lista:</p>
+                                            <p class="font-medium">Enero 2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-700 rounded-lg p-4">
+                            <h3 class="text-lg font-bold mb-2">Opiniones</h3>
+                            <div class="space-y-4">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Alex" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="vip-name">AlexMiner</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 3 días</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">El mejor servidor de Minecraft que he jugado. Los minijuegos son increíbles y la comunidad es muy activa.</p>
+                                    <div class="signature">
+                                        <img src="https://via.placeholder.com/300x50?text=Firma+de+AlexMiner" alt="Signature">
+                                    </div>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-600 pb-4">
+                                    <div class="flex items-center">
+                                        <img src="https://mc-heads.net/avatar/MHF_Steve" alt="User avatar" class="h-8 w-8 rounded-full">
+                                        <div class="ml-2">
+                                            <span class="text-blue-400">Usuario456</span>
+                                            <div class="flex">
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-yellow-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400">Hace 1 semana</span>
+                                    </div>
+                                    <p class="mt-2 text-sm">Muy buen servidor, pero a veces hay demasiada gente y se lagea un poco. Fuera de eso, excelente.</p>
+                                </div>
+                                
+                                <!-- Add Review Form -->
+                                <div class="pt-4">
+                                    <h4 class="text-md font-bold mb-2">Añadir tu opinión</h4>
+                                    <div class="flex mb-2">
+                                        <span class="mr-2 text-sm">Rating:</span>
+                                        <div class="flex">
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+                                            <i class="far fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <textarea class="w-full px-3 py-2 bg-gray-600 border border-gray-500 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3" placeholder="Escribe tu opinión sobre este servidor..."></textarea>
+                                    <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm">
+                                        <i class="fas fa-paper-plane mr-1"></i> Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     <!-- Botón para abrir el editor -->
     <button id="edit-profile-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded">Editar Perfil</button>
@@ -1098,6 +1529,7 @@
       </div>
     </div>
 
+   
     <!-- Modal de Autenticación -->
     <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
       <div class="bg-gray-800 rounded-lg p-6 w-full max-w-sm">
@@ -1112,6 +1544,7 @@
           <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Entrar</button>
           <button type="button" id="forgot-pass" class="w-full text-xs text-blue-400 mt-1">¿Olvidaste tu contraseña?</button>
           <button type="button" id="login-google" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded mt-2"><i class="fab fa-google mr-1"></i> Google</button>
+          <button type="button" id="login-google-modal" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded mt-2"><i class="fab fa-google mr-1"></i> Google</button>
         </form>
         <form id="register-form" class="space-y-3 hidden">
           <input id="register-email" type="email" required placeholder="Correo" class="w-full px-3 py-2 rounded bg-gray-700 text-white">
@@ -1120,6 +1553,16 @@
         </form>
         <button id="close-auth" class="w-full mt-4 bg-gray-600 hover:bg-gray-700 text-white py-2 rounded">Cerrar</button>
         <div id="auth-msg" class="text-center text-sm text-red-400 mt-2"></div>
+      </div>
+    </div>
+
+    <!-- Chat de Ayuda -->
+    <div class="bg-gray-800 rounded-lg shadow p-4 mt-8">
+      <h3 class="text-lg font-bold mb-2">Chat de Ayuda</h3>
+      <div id="help-messages" class="h-32 overflow-y-auto bg-gray-700 rounded mb-2 p-2"></div>
+      <div class="flex">
+        <input id="help-input" type="text" class="flex-1 px-2 py-1 rounded bg-gray-700 text-white" placeholder="Escribe tu mensaje...">
+        <button id="help-send" class="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded">Enviar</button>
       </div>
     </div>
 
@@ -1176,8 +1619,13 @@
         </div>
     </footer>
 
-    <script type="module">
-/* =========================
+    <!-- Botón para volver al inicio -->
+    <button id="back-to-top" style="opacity:0.5;position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:1000;display:none;" class="bg-gray-800 text-white px-4 py-2 rounded shadow-lg hover:opacity-100 transition">
+      Volver al inicio
+    </button>
+
+    <script>
+    /* =========================
    ESTADO GLOBAL Y UTILIDADES
    ========================= */
 let currentLanguage = 'es';
@@ -1508,6 +1956,9 @@ setInterval(updateServerStats, 5000);
    AUTENTICACIÓN Y USUARIO
    ========================= */
 const loginBtn = document.getElementById('login-google');
+const loginBtnModal = document.getElementById('login-google-modal');
+if (loginBtn) loginBtn.onclick = () => signInWithPopup(auth, new GoogleAuthProvider());
+if (loginBtnModal) loginBtnModal.onclick = () => signInWithPopup(auth, new GoogleAuthProvider());
 const logoutBtn = document.getElementById('logout');
 const userInfo = document.getElementById('user-info');
 if (loginBtn && logoutBtn && userInfo) {
@@ -1516,26 +1967,30 @@ if (loginBtn && logoutBtn && userInfo) {
 }
 
 onAuthStateChanged(auth, async user => {
-    currentUser = user;
-    if (user) {
-        loginBtn?.classList.add('hidden');
-        logoutBtn?.classList.remove('hidden');
-        userInfo.textContent = `Hola, ${user.displayName || user.email}`;
-        document.getElementById('edit-profile-btn')?.classList.remove('hidden');
-        // Carga rol desde Firestore
-        const userDoc = await getDoc(doc(db, "users", user.uid));
-        isVIP = userDoc.exists() && userDoc.data().role === "vip";
-        document.getElementById('cover-label').style.display = isVIP ? 'block' : 'none';
-        document.getElementById('signature-gif-label').style.display = isVIP ? 'block' : 'none';
-    } else {
-        loginBtn?.classList.remove('hidden');
-        logoutBtn?.classList.add('hidden');
-        userInfo.textContent = '';
-        document.getElementById('edit-profile-btn')?.classList.add('hidden');
-        isVIP = false;
-    }
-    lockSocialFeatures();
-    toggleAds();
+  currentUser = user;
+  if (user) {
+    loginBtn?.classList.add('hidden');
+    loginBtnModal?.classList.add('hidden');
+    logoutBtn?.classList.remove('hidden');
+    openAuthModalBtn?.classList.add('hidden');
+    userInfo.textContent = `Hola, ${user.displayName || user.email}`;
+    document.getElementById('edit-profile-btn')?.classList.remove('hidden');
+    // Carga rol desde Firestore
+    const userDoc = await getDoc(doc(db, "users", user.uid));
+    isVIP = userDoc.exists() && userDoc.data().role === "vip";
+    document.getElementById('cover-label').style.display = isVIP ? 'block' : 'none';
+    document.getElementById('signature-gif-label').style.display = isVIP ? 'block' : 'none';
+  } else {
+    loginBtn?.classList.remove('hidden');
+    loginBtnModal?.classList.remove('hidden');
+    logoutBtn?.classList.add('hidden');
+    openAuthModalBtn?.classList.remove('hidden');
+    userInfo.textContent = '';
+    document.getElementById('edit-profile-btn')?.classList.add('hidden');
+    isVIP = false;
+  }
+  lockSocialFeatures();
+  toggleAds();
 });
 
 /* =========================
@@ -1692,6 +2147,107 @@ document.title = "Mine Of Servers | Comunidad Minecraft";
    ========================= */
 // Puedes agregar un botón de PayPal o Ko-fi en el sidebar o footer
 
-</script>
+// (Eliminado: declaración duplicada de openAuthModalBtn y authModal)
+// El código ya está declarado y manejado arriba, así que puedes eliminar este bloque duplicado.
+
+    // =========================
+    // Botón volver al inicio
+    // =========================
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTop.onclick = function() {
+      window.scrollTo({top:0,behavior:'smooth'});
+    };
+
+    // =========================
+    // SPA: Mostrar/Ocultar Secciones
+    // =========================
+    function showSection(section) {
+      document.querySelectorAll('main > section, main > aside').forEach(el => el.classList.add('hidden'));
+      if (!section || section === 'inicio') {
+        document.getElementById('servers')?.classList.remove('hidden');
+        document.getElementById('news')?.classList.remove('hidden');
+        document.getElementById('mods')?.classList.remove('hidden');
+        document.getElementById('essential')?.classList.remove('hidden');
+        document.getElementById('forum')?.classList.remove('hidden');
+      } else if (section === 'forum') {
+        document.getElementById('forum-section')?.classList.remove('hidden');
+      } else if (section === 'mods') {
+        document.getElementById('mods-section')?.classList.remove('hidden');
+      }
+      // Agrega más secciones si tienes más
+    }
+    window.addEventListener('hashchange', () => {
+      const hash = location.hash.replace('#/', '');
+      showSection(hash || 'inicio');
+    });
+    showSection(location.hash.replace('#/', '') || 'inicio');
+
+    // =========================
+    // Modal de autenticación
+    // =========================
+    const openAuthModalBtn = document.getElementById('open-auth-modal');
+    const authModal = document.getElementById('auth-modal');
+    if (openAuthModalBtn && authModal) {
+      openAuthModalBtn.onclick = () => authModal.classList.remove('hidden');
+    }
+    document.getElementById('close-auth')?.addEventListener('click', () => {
+      authModal.classList.add('hidden');
+    });
+
+    // =========================
+    // Modal de edición de perfil
+    // =========================
+    document.getElementById('edit-profile-btn')?.addEventListener('click', function() {
+      document.getElementById('profile-modal').classList.remove('hidden');
+    });
+    document.getElementById('close-profile')?.addEventListener('click', function() {
+      document.getElementById('profile-modal').classList.add('hidden');
+    });
+
+    // =========================
+    // Simulación de actualización de estadísticas (puedes quitar si no lo usas)
+    // =========================
+    function updateServerStats() {
+      const playerCounts = document.querySelectorAll('.bg-green-100.text-green-800');
+      playerCounts.forEach(count => {
+        const parts = count.textContent.split('/');
+        const current = parseInt(parts[0].replace(/,/g, ''));
+        const max = parseInt(parts[1].replace(/,/g, ''));
+        const change = Math.floor(Math.random() * 20) - 10;
+        const newCount = Math.max(0, Math.min(current + change, max));
+        count.textContent = newCount.toLocaleString() + '/' + max.toLocaleString();
+      });
+    }
+    setInterval(updateServerStats, 5000);
+
+    // =========================
+    // Language toggle (demo)
+    // =========================
+    // (Eliminado: variable ya declarada arriba)
+    if (languageToggle) {
+      languageToggle.addEventListener('click', function() {
+        if (currentLanguage === 'es') {
+          currentLanguage = 'en';
+          languageToggle.innerHTML = '<i class="fas fa-globe mr-1"></i> EN';
+          alert('Traducción a inglés (demo)');
+        } else {
+          currentLanguage = 'es';
+          languageToggle.innerHTML = '<i class="fas fa-globe mr-1"></i> ES';
+          alert('Traducción a español (demo)');
+        }
+      });
+    }
+
+    function goToProfile(username) {
+    if (username === 'Usuario123') {
+        window.location.href = 'https://mineofservers.com/mi-perfil';
+    } else {
+        window.location.href = `https://mineofservers.com/perfil/${encodeURIComponent(username)}`;
+    }
+}
+    </script>
 </body>
 </html>
